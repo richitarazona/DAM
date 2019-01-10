@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <form name="miform">
+        <h2>Calcular Fechas</h2>
+        <label>INTRODUCE FECHA</label>
+        <input type="text" name="fecha" size="10" /><br /><br />
+        <input
+          type="button"
+          value="verificar"
+          onclick="validar()"
+        /><br /><br />
+        <input
+          type="button"
+          value="mostrando"
+          onclick="mostrar()"
+        /><br /><br />
+        <input type="text" name="fechafinal" size="35" /><br /><br />
+        <label>15 dias</label>
+        <input type="checkbox" name="sumaFechas" value="15 dias" />
+        <label>20 dias</label>
+        <input type="checkbox" name="sumaFechas" value="15 dias" />
+        <label>3 meses</label>
+        <input type="checkbox" name="sumaFechas" value="15 dias" /><br /><br />
+        <input
+          type="button"
+          value="calcularFecha"
+          name="claculaFechas"
+        /><br /><br />
+        <input type="text" name="ResultadoFecha" size="35" />
+      </form>
+    </center>
+  </body>
+</html>

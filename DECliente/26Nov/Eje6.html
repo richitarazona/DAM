@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var elementos = [];
+        document.getElementById("valores").innerHTML = elementos;
+
+    function ponerElementosFinal(){
+        var el = document.miform.elemento.value;
+        elementos.push(el);
+        document.getElementById("valores").innerHTML = elementos; 
+        
+    }
+    function quitarElementosFinal(){
+        
+        elementos.pop();
+        document.getElementById("valores").innerHTML = elementos;
+    }
+    function quitarElementosInicio(){
+        elementos.shift();
+        document.getElementById("valores").innerHTML = elementos;
+    }
+    function ponerElementosInicio(){
+        var el = document.miform.elemento.value;
+        elementos.unshift(el);
+        document.getElementById("valores").innerHTML = elementos;
+    }
+
+    </script>
+
+</head>
+<body>
+    <center>
+        <form name="miform">
+            <h2>Lista de elementos</h2>
+            <input type="text" name="elemento"><br><br>
+            <input type="button" name="quitar" onclick="quitarElementosFinal()"><label for="">Quitar elementos del final</label><br>
+            <input type="button" name="poner"   onclick="ponerElementosFinal()"><label for="">Añadir Elementos al final</label><br>
+            <input type="button" name="quitar" onclick="quitarElementosInicio()"><label for="">Quitar elementos del inicio</label><br>
+            <input type="button" name="poner"   onclick="ponerElementosInicio()"><label for="">Añadir Elementos al inicio</label><br>
+            <span id="valores">Estos son los elementos:</span><br>
+        </form>
+    </center>
+</body>
+</html>

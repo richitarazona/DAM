@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <center>
+        <script>
+            document.write("<h3>Ejercicio 04</ h3><hr>");
+            var suma = 0;
+            var resta = 0;
+            var cant = 0;
+            var mayor = 0;//TB SIRVE MIN_SAFE_INTEGER
+            var menor = 10000;
+
+
+            do {
+
+                a = parseInt(prompt("Introduce un numero", ""));
+                if (a == 0) break;
+                suma = suma + a;
+                cant++;
+                if (a > mayor) mayor = a;
+                if (a < menor) menor = a;
+
+            } while (a != 0);
+
+            document.write("la suma es ", suma, "<br>");
+            document.write("la media es ", suma / cant, "<br>");
+            document.write("el numero menor es  ", menor, "<br>");
+            document.write("el numero mayor es  ", mayor, "<br>");
+
+
+
+        </script>
+    </center>
+
+
+
+</body>
+
+</html>

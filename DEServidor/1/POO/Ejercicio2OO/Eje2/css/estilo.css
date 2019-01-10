@@ -1,0 +1,176 @@
+
+root { 
+    display: block;
+}
+body {
+    height: 100%;
+    background-color: #333333;
+    background-position: 50% 0;
+    /* color: #000000; */
+    line-height: 1.5;
+    font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+    font-size: 80%;
+    text-align: center;
+    color: #333;
+    background-color: #00a0b0;
+}
+#contenido {
+   width: 90%;
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #B51032;
+  min-height: 600px;
+}
+
+#principal {    
+    padding: 15px;
+    min-height: 40%;
+     
+    
+}
+
+#cabecera {
+    height: 90px;
+    background-color: #B2DD32;
+    background-image: url(../images/header1.jpg);
+    background-repeat: repeat-x;
+    margin: 0 auto;
+   
+    
+    
+}
+#cabecera #menu {
+    background-color: darkgreen;
+    background-image: url(../images/menu_bg.png);
+    border: 1px solid wheat;
+    width: 100%;
+    
+}
+
+#menu a {
+   color: #B51032;
+   text-decoration: none;
+}
+
+#menu a:hover {
+    color: black;
+}
+#menu ul {     
+    list-style-type: none;
+    text-align: left;
+}
+
+#menu ul li {
+    display: inline;
+    border-right: 1px solid wheat;
+    padding-right: 2em;
+    padding-left: 2em;
+   
+}
+#cabecera h1{
+    text-align: center;
+    color: #B51032;
+    font-family:"Georgia", Arial, sans-serif;
+    
+}
+
+#principal .persona {
+    border-bottom: 1px solid #00a0b0;
+    text-align: left;
+    width: 60%;
+    margin: 5px;
+    padding-left: 10px;
+}
+
+#pie {
+    
+    margin: 0 auto;
+    color: #B51032;
+    border-top:  5px solid #B51032;
+    
+}
+#pie p {
+    text-align: center;
+    font-size: smaller;
+    
+}
+
+ 
+
+h1, h2, h3, h4 {
+    color: darkslategray;
+}
+
+table {
+    border: 1px solid #00a0b0;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+td, th {
+    border: 1px solid #00a0b0;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+}
+
+#form {
+   margin-top: 2em;
+   margin-left: 2em;
+    width: 50%;
+}
+
+label {
+    width: 5em;
+    padding-right: 1em;
+    float: left;
+}
+#form input {
+    float: left;
+    margin-bottom: .6em;
+}
+#form input[type='text'], #form input[type='password'] {
+    width: 15em;
+}
+
+#form input[type='submit'] {
+   
+    width: 10em;
+    margin-top: 2em;
+}
+
+#form input[type='radio'] {
+    width: 2em;
+    margin-left: 2em;
+    float:none;
+}
+#form input[type='checkbox'] {
+    width: 2em;
+    margin-left: 2em;
+    float:none;
+}
+#form  select {
+    float: left;
+    width: 15em;
+    margin-bottom: .6em;
+    
+}
+
+br {
+    clear: left;
+}
+.resultado {
+    margin-top: 5em;
+    padding: 1px;
+    color: darkslateblue;
+    margin-left: 10em;
+}
+.error {
+    padding-left:  5px;
+    color:  crimson;
+    font-size: small;
+}

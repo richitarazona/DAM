@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function trim(){
+        var frase = document.miform.frase.value;
+        var resultado = frase.trim();
+        alert(resultado);}
+
+    function mayusculas(){
+        var frase = document.miform.frase.value;
+        var resultado = frase.toUpperCase();
+        alert(resultado);}
+
+    function minusculas(){
+        var frase = document.miform.frase.value;
+        var resultado = frase.toLowerCase();
+        alert(resultado);}
+
+    function fraseToArray(){
+        var frase = document.miform.frase.value;
+        var fraseSplit = frase.split(" ");
+        alert("Numero de palabras de son:" + fraseSplit.length);
+        var cadenaUnida = "";
+        for( i in fraseSplit){
+             cadenaUnida += fraseSplit[i];}
+        alert("CadenaUnida a caracteres es :" + cadenaUnida);} 
+
+    function quitar_Espacios(){
+        var frase = document.miform.frase.value;
+        var fraseNoEspacios = frase.trim(" ");
+        alert(fraseNoEspacios);
+        alert(frase[2]);}
+
+    function findWords(){
+        var frase = document.miform.frase.value;
+        var fraseSplit = frase.split(" ");
+        numero_coincidencias = 0;
+        alert("El  numero de palabras de "+ frase + " es: " + fraseSplit.length);
+        var letra =prompt("Introduzca una letra");
+        if(fraseSplit.includes(letra)){
+            alert("Si que existe la letra");
+        for (var i = 0; i < fraseSplit.length; i++) {
+            var si = fraseSplit[i].includes(letra);
+        if(si){
+               alert("La palabra " + fraseSplit[i] + " contien la letra: " + letra );
+                numero_coincidencias++;
+            }else{
+                alert("La palabra " + fraseSplit[i] + " NO contiene la letra: " + letra )
+            }
+        }
+
+       alert("El numero de palabras con coincidencias es: " + numero_coincidencias);}
+
+
+    function mostrarPalabras(){
+           var mensaje = document.miform.frase.value;
+           var fraseSplit = mensaje.split(" ");
+           alert("El  numero de palabras de "+ mensaje + " es: " + fraseSplit.length);
+           for (i=0; i <= fraseSplit.length; i++){
+               alert(fraseSplit[i]);}
+
+       function buscarElementos(){
+           var frase = document.miform.frase.value;
+           var fraseSinEspacio = frase.split("");
+           var veces = 0;
+           var veces1 = 0;
+           var letra = prompt("Indica una letra");
+           for (var i = 0; i < fraseSinEspacio.length; i++) 
+           {
+               numero=texto.indexOf(letra,0);
+               while(veces != -1){
+                   veces++;
+                   numero=texto.indexOf(letra,numero);}   
+            
+            return veces;
+            alert("La letra " + letra + " aparece " + numero + "veces")
+            
+        
+            
+    </script>
+</head>
+
+<body>
+    <center>
+        <form name="miform">
+            Introduzca una frase: <input type="text" name="frase" size="40"><br>
+            <input type="button" value="Enviar" onclick="trim()"><br>
+            <input type="button" value="Mayusculas" onclick="mayusculas()">
+            <input type="button" value="Minusculas" onclick="minusculas()"><br>
+            <input type="button" value="Enviar" onclick="trim()">
+            <input type="button" value="Char" onclick="fraseToArray()"><br>
+            <input type="button" value="Espacios" onclick="quitar_Espacios()"><br>
+            <input type="button" value="Buscar Letra" onclick="findWords()"><br>
+            <input type="button" value="Mostrar palabras de la frase" onclick="mostrarPalabras()"><br>
+            <input type="button" value="Busca Letras" onclick="buscarElementos()">
+
+
+        </form>
+    </center>
+</body>
+
+</html>

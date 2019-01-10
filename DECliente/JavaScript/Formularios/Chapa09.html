@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formularios</title>
+    <script>
+      function sumar() {
+        //para acceder  los valores del formulario
+        document.miformulario.suma.value =
+          parseInt(document.miformulario.caja1.value) +
+          parseInt(document.miformulario.caja2.value) +
+          parseInt(document.miformulario.caja3.value);
+
+        //me indica sobre que caja se va el puntero por defecto
+        document.miformulario.caja1.focus();
+        document.miformulario.caja1.select();
+        //otra maner de consegir de acceder a los vlaores del formulario
+        var x = document.getElementById("pato").value;
+        alert(x);
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2>Suma de 2 numeros</h2>
+      <form name="miformulario">
+        <br /><br />
+        Numnero 1.-
+        <input
+          type="text"
+          name="caja1"
+          id="pato"
+          value=""
+          size="5"
+        /><br /><br />
+        Numnero 2.-
+        <input type="text" name="caja2" value="" size="5" /><br /><br />
+        Numnero 3.-
+        <input type="text" name="caja3" value="" size="5" /><br /><br />
+        //creamos un boton que nos llama a la funcion Sumar
+        <input type="button" value="Pulsame" name="boton" onclick="sumar()" />
+        <br /><br /><br />
+        Suma: <input type="text" name="suma" value="" size="5" /><br /><br />
+      </form>
+    </center>
+  </body>
+</html>

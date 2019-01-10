@@ -1,0 +1,131 @@
+    @font-face {
+        font-family: "FontAwesome";
+        src: url("fontawesome-webfont.woff");
+    }
+    .face{
+
+    color: rgb(52, 56, 121);
+    padding: 12px;
+
+    }
+
+    .boton{
+
+        color: rgb(52, 56, 121);
+        width: 100px;
+        height:40px;
+        text-align: center;
+    
+    }
+
+    .rojo{
+
+        color: rgb(253, 13, 13);
+        
+        }
+        
+        p{
+        
+            color: black;
+            
+            
+        }
+        .user{
+        
+            background:#16a085;
+            width: 100px;
+            color:white;
+            padding: 8px;
+            border: #F23C50;
+            border-radius: 4px;
+            text-align: center;
+        }
+        body{
+        background: #E9F1DF;
+
+
+        }
+
+        a.pinte::before{
+
+
+        }
+
+        .pint{
+
+            background: rgb(231, 199, 199);
+            width: 110px;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .send{
+
+    background: rgb(148, 148, 148);
+    padding: 15px;
+    border-radius: 10px;
+    border-style: solid black 4px;
+
+        }
+
+.pinterest{
+
+        padding-left: 15px;
+        color: #F23C50;
+    }
+    .instagram{
+
+        color: darkgoldenrod;
+        padding-left:8px;
+    }
+    .enviar{
+
+        font-size: 30px;
+    }
+
+    li{
+
+         list-style: none;
+    }
+
+    h1{
+
+        color: white;
+
+        text-align: center;
+        background-color: #34495e;
+    }
+
+    h2{
+        background: #34495e;
+        color:white;
+        text-align: center
+    }
+
+    .contenedor{
+
+        position:relative;
+    ;
+    }
+
+    .hijo{
+position: relative;
+float: left;
+width: 50%;
+color: #c0392b;
+
+
+
+
+    }
+    .hijoface{
+
+        text-align:center;
+        
+    }
+    .hijogoogle{
+
+        position:  left;
+    }
+    
+        

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CHAPA 17</title>
+
+    <script>
+      /*   //manera de declarar arrays
+        var nombres = new Array("aaaa", "bbbb", "cccc", "dddd");
+        alert(nombres[1]);
+        //segunda manera
+        var nombres2 = ["aaaa", "bbbb", "cccc", "dddd"];
+        alert(nombres2[2]);
+
+        //array asociativos
+
+        var moneda = new Array();
+        var moneda = [];
+        moneda["francias"] = "Euro";
+        moneda["españa"] = "Euro";
+        moneda["Japon"] = "yen";
+        moneda["alemania"] = "Euro";
+
+        alert(moneda["francias"]);
+
+        var productos = new Array();
+        productos["zapatos"] = 30;
+        productos["camisas"] = 15;
+        productos["prelojes"] = 20;
+
+        //recorrer el array aociativo
+
+        for (var clave in productos) {
+          document.write(clave + ":" + productos[clave] + "€<br>");
+        }
+
+        //multidimensionales
+      var ususarios=[["angel",23],["peres",23],["rolos",25]]
+      document.write("nombre" + + "") */
+
+      function hacer() {
+        /*  alert("patata");
+          document.getElementById("eti").innerHTML = "NAME"; */
+        var i = 0;
+        var guardo = [];
+        while (true) {
+          var rnd = Math.trunc(1 + 5 * Math.random());
+          alert(rnd);
+          if (guardo.indexOf(rnd) == -1) {
+            //if(guardo.includes(a))
+            guardo.push(rnd);
+          }
+          i++;
+
+          if (i == 5) {
+            break;
+          }
+        } //while
+
+        alert(guardo);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="miform">
+      <label id="eti">Nombre:</label>
+      <input type="button" value="Pulsar" name="btHacer" onclick="hacer()" />
+    </form>
+  </body>
+</html>

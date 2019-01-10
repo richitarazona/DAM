@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contenedor contenedor-max contenedor-columnas ">
+      <div class="caja1 tema1">
+        <img
+          src="https://dummyimage.com/100x100/000/fff"
+          alt=""
+          class="caja1__img"
+        />
+      </div>
+      <div class="caja2 tema2">
+        <p>
+          <strong>Variables</strong> para dos temas que crearemos. Para cada
+          tema establece el color base, el color de fa fuente, color de fondo y
+          color de borde, utiliza
+          <a href="https://www.dariobf.com/aprender-less-funciones/"
+            >funciones de less </a
+          >para actuar siempre sobre el color base.
+        </p>
+        <p>
+          <strong>Mixins</strong> para establecer un borde (con todos sus
+          posibles parámetros), para crear tema(como parametros, el color de la
+          fuente, fondo, y bode con todos sus parámetros, mixin anterior), crear
+          una caja(ancho como parámetro), darle un ancho máximo a una caja(como
+          parámetro dicho ancho) y márgenes equitativos a derecha e izquierda y
+          mixin para flotar a un lado(lado como parámetro)
+        </p>
+        <p class="overflow-puntos-suspensivos">
+          Utiliza un archivo para variables y mixins otro para lo demás
+          utilizando comentarios y compila todo en styles.less
+        </p>
+      </div>
+    </div>
+    <footer class="contenedor contenedor-max">
+      <p>
+        Para crear el efecto de cortar lo que no cabe y poner puntos suspensivos
+        utiliza las propiedades:
+      </p>
+      <pre class="scroll-horizontal"><code >
+    white-space: nowrap;
+    overflow: hidden;
+    // ellipsis aparecen los tres puentos suspensivos al ocultar
+    text-overflow: ellipsis;
+    </code>
+    </pre>
+    </footer>
+  </body>
+</html>

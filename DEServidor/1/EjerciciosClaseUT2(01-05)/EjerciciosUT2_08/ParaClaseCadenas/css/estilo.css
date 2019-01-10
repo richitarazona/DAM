@@ -1,0 +1,150 @@
+
+root { 
+    display: block;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: cadetblue;
+    font-family: "Arial";
+    margin: 10px;
+}
+
+h2, h3, h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: navy;
+}
+
+ul li {
+    margin-left: 10px;
+}
+#contenido {
+    width: 800px;
+    background-color: bisque;
+    margin:0 auto;
+    padding: 15px;
+     
+}
+
+#principal {
+   
+   margin: 0;
+    padding: .5em 2em;
+    min-height: 700px;
+    
+}
+#principal a {
+    text-decoration: none;
+}
+#principal a:hover {
+    color: indigo;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+#principal table   {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#principal table  caption {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+
+#principal table td {
+    border: 1px solid cadetblue;
+    padding: 5px;
+}
+#principal p {
+    margin-bottom: 5px;
+}
+#principal .sentencia {
+   font-style:  italic;
+}
+
+#cabecera {
+    margin-bottom: 50px;
+    background-color: slategrey;
+    margin:0 auto;
+    min-height: 40px;
+    
+    text-align: center;
+    font-family: "Georgia";
+}
+
+#cabecera h2 {
+    color: bisque;
+    padding: 10px; 
+}
+#pie {
+    
+    background-color: slategrey;
+    margin:0 auto;
+    min-height: 20px;
+    
+    text-align: center;
+    font-size: smaller;
+    font-family: "Palatyno";
+}
+#form {
+    padding: 1em;
+}
+#form fieldset legend {
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: large;
+}
+#form fieldset {
+    padding: 1em; 
+    
+}
+form label {
+    width: 10em;
+}
+input[type='text'] {
+     width: 30%;
+     margin-bottom: 5px;
+}
+input[type='radio'], input[type='checkbox'] {
+     width: 30px;
+     margin-bottom: 5px;
+}
+
+#form textarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#form select{
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comen {
+    color: darkslateblue;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+        
+}
+#usuario {
+    width: 8em;
+    float: left;
+}
+
+.articulo {
+    border: 1px dotted cadetblue;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.articulo .descripcion {
+    display: block;
+}
+
+.articulo .precio {
+    display: block;
+}

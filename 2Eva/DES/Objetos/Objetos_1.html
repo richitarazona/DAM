@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Objetos</title>
+    <script>
+      /*   var factura = {
+        numero: 123,
+        cliente: "Transportes de ganado",
+        total: 200.45,
+        iva: 25
+      };
+      //son de tipo objeto
+      alert(typeof factura);
+      //para obtener los valores
+      var numFac = factura.numero;
+      var subTotal = factura.total;
+      alert("La factura: " + numFac + " Asciende a : " + subTotal + "€");
+
+      //para cambiar los valores
+
+      factura.numero = 567;
+      var numFac = factura.numero;
+      alert("La factura: " + numFac + " Asciende a : " + subTotal + "€"); */
+
+      //FUNCIONES con parametros y sin  parametros 1
+      var factura = {
+        numero: 123,
+        cliente: "Transportes de ganado",
+        subTotal: 200.45,
+        iva: 25,
+        total: function(descuento = 0) {
+          return this.subTotal + this.iva - descuento;
+        }
+      };
+
+      var numFac = factura.numero;
+      /* var sindescuento = fact.total();
+      alert(sindescuento); */
+      var totalFactura = factura.total(100);
+      alert("El total de la factura" + numFac + " es de : " + totalFactura);
+
+      var factura = {
+        numero: 123,
+        cliente: "Transportes de ganado",
+        subTotal: 200.45,
+        iva: 25,
+        total: CalculoTotal
+      };
+      function CalculoTotal(descuento = 19) {
+        return this.subTotal + this.iva - descuento;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

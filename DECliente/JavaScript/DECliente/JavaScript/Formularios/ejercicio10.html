@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function mostar(){
+          for (i = 0; i < miformulario.extremadura.length; i++) {
+            if(document.miformulario.extremadura[i].checked){
+
+                alert(document.miformulario.extremadura[i].value)
+            }
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2>RadioButton</h2>
+      <br /><br />
+
+      <form name="miformulario">
+        <input
+          type="radio"
+          name="extremadura"
+          value="caceres"
+          id=""
+          checked
+        />Caceres<br />
+        <input
+          type="radio"
+          name="extremadura"
+          value="badajoz"
+          id=""
+        />Badajoz<br />
+        <hr />
+        <hr />
+        <input
+          type="radio"
+          name="C.Valenciana"
+          value="valencia"
+          id=""
+          checked
+        />Valencia<br />
+        <input
+          type="radio"
+          name="C.Valenciana"
+          value="alicante"
+          id=""
+        />Alicante<br />
+        <input
+          type="radio"
+          name="C.Valenciana"
+          value="castellon"
+          id=""
+        />Castellon<br />
+        <hr />
+        <hr />
+        <input type="button" value="boton" onclick="mostrar()" name="boton" />
+      </form>
+    </center>
+  </body>
+</html>

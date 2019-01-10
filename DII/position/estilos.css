@@ -1,0 +1,14 @@
+.izq {
+  position: relative;
+  float: left;
+}
+.td {
+  float: left;
+}
+.dr {
+  float: right;
+  display: block;
+}
+.clearleft {
+  clear: left;
+}

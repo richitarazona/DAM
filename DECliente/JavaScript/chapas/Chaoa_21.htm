@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      document.write(81.66 * 15);
+      var numero = 81.66 * 15;
+      //redondea a dos decimales
+      document.write("<br>" + numero.toFixed(2));
+      document.write("<br>" + Number.MAX_VALUE);
+      document.write("<br>" + Number.MIN_VALUE);
+      document.write("<br>" + Number.MAX_SAFE_INTEGER);
+      document.write("<br>" + Number.MIN_SAFE_INTEGER);
+
+      var dato1 = prompt("valor", "");
+      document.write("<br>" + isNaN(dato1));
+
+      //numero aleatorio
+      document.write("<br>" + Math.random());
+      //mayor vaoer de una lista
+      document.write("<br>" + Math.max(12, 54, 87));
+      //elevamos un numero
+      document.write("<br>" + Math.pow(2, 2));
+    </script>
+  </head>
+  <body>
+    <input type="button" value="LANZAR" onclick="dados" />
+  </body>
+  <script>
+    var resultado = 0;
+    do {
+      resultado = parseInt(Math.random() * 10);
+    } while (resultado < 1 || resultado > 6);
+    12;
+
+    alert(resultado);
+  </script>
+</html>

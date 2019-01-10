@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <script>
+      var matriz = ["aaaaaa", "bbbbbb", "ccccccc", "dddddd", "fffffff"];
+      /*extrae desde la posicion 2 a la 3 ("ccccccc","ddddddd").De opocion a posicion -1
+            var otramatriz = matirz.slice(2, 4);
+            alert(otramatriz);
+       */
+      /*  var matirz = ["aaaaaa", "bbbbbb", "ccccccc", "dddddd", "fffffff"];
+            //Desde la posicion , n numero de caracteres
+            var otramatriz = matirz.splice(1, 3);
+            alert(otramatriz); */
+
+      //   // Extrae desde la posicion 2,2 caracteres y mete los valores en el nuevo array
+      //   var otramatriz = matriz.splice(2, 2, "PPPPP", "QQQQQ");
+      //   alert(otramatriz)
+      //   alert(matriz);
+
+      /*  var otramatriz = matriz.splice(2, 0, "PPPPP", "QQQQQ");
+      alert(otramatriz);
+      alert(matriz);
+
+      var persona_0 = ["AAAA", 11, "948000"];
+      var persona_1 = ["BBBBB", 22, "9486770"];
+      var persona_2 = ["CCCCC", 33, "948540"];
+      var persona_3 = ["DDDD", 44, "948345"];
+
+      var persona = [persona_0, persona_1, persona_2, persona_3];
+      alert(PERSONA[2][1]); */
+
+      var persona_0 = ["AAAA", 11, "948000"];
+      var persona_1 = ["BBBBB", 22, "9486770"];
+      var persona_2 = ["CCCCC", 33, "948540"];
+      var persona_3 = ["DDDD", 44, "948345"];
+      var persona = [persona_0, persona_1, persona_2, persona_3];
+
+      var resul = `<table> <tr>
+                           <th>Nombre</th> 
+                           <th>Apellidos</th>
+                          <th>Telefono</th>
+                          </tr>`;
+
+      for (var i = 0; i < persona.length; i++) {
+        //Bucle que recorre el array que está en la posición i
+        resul += `
+                                  <tr>
+                                  <td>${persona[i][0]}</td>
+                                  <td>${persona[i][1]}</td>
+                                  <td>${persona[i][2]}</td>
+                                  
+                                  </tr>
+                          `;
+      }
+
+      resul += `</table>`;
+      document.write(resul);
+    </script>
+  </head>
+  <body></body>
+</html>

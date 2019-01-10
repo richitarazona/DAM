@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JSON_1</title>
+  </head>
+  <body>
+    <script>
+      //Forma de agrupar datos , pueden ser de cualquier tipo
+
+      var Ciudadano = {
+        Nombre: "Jorge",
+        Apellido: "Martinez",
+        Telefono: "666972037",
+        sumar: function(a, b) {
+          return a + b;
+        }
+      };
+
+      //para accedr a los datos
+
+      alert(Ciudadano["Nombre"]);
+      alert(Ciudadano.sumar(2, 3));
+
+      /* for (x in Ciudadano) {
+        document.write(x + ":" + Ciudadano[x] + "<br>");
+      }
+
+      document.write("<hr>");
+
+      //Vamos a crear un objeto que e sun array
+
+      var objeto1 = {
+        personas: [
+          { Nombre: "Coleguita", edad: 23 },
+          { Nombre: "Ricardo", edad: 25 },
+          { Nombre: "Ramon", edad: 23 }
+        ]
+      };
+
+      alert(objeto1.personas[1].nombre); 
+ */
+      //*********************************************************************************
+
+      /*   var Fruteria = {
+        Fruta: [
+          { nombre: "Manzana", cantidad: 10 },
+          { nombre: "Pepino", cantidad: 12 },
+          { nombre: "Uva", cantidad: 30 }
+        ]
+      };
+
+      alert(
+        "La cantidad de " +
+          Fruteria.Fruta[2].nombre +
+          " es de : " +
+          Fruteria.Fruta[2].cantidad
+      ); */
+    </script>
+  </body>
+</html>

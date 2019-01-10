@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form name="miform">
+                <h2>Calculo de gasto trimestral</h2>
+                <label>Seleccione un trimestre: </label> 
+                <select name="trimestre"  size="1">
+                        <option value="1T" name="Tri1">Trimestre 1</option>
+                        <option value="2T" name="Tri2">Trimestre 2</option>
+                        <option value="3T" name="Tri3">Trimestre 3</option>
+                        <option value="4t" name="Tri4">Trimestre 4</option>
+                 </select><br>
+                 <label>Introduzca el gasto trimestral</label>
+                 <input type="text" name="Gasto"><br>
+                 <input type="button" value="Añadir" onclick="calculaGasto()">
+                 <input type="button" value="Añadir" onclick="SumarGasto(this.value)">
+                </form>
+     </center>
+</body>
+</html>

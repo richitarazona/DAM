@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coches</title>
+    <script>
+      function Coche(marca, modelo, precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+      }
+
+      function sumarIva() {
+        return Math.round(this.precio * 1.1);
+      }
+
+      //para llamr a esrta funcion creamos un metodo
+
+      Coche.prototype.SumaI = sumarIva;
+
+      var coche1 = new Coche("Renault", "r5", 12000);
+      var coche2 = new Coche("Ford", " Fiesta", 22000);
+      var coche3 = new Coche("Opel", " Corsa", 32000);
+      var coche4 = new Coche("Subaru", "Mucho", 42000);
+
+      cadena =
+        "El coche " +
+        coche1.marca +
+        " cuesta: " +
+        coche1.precio +
+        " y con Iva son: " +
+        coche1.SumaI();
+      cadena2 = "El coche " + coche2.marca + " cuesta: " + coche2.precio;
+      alert(cadena);
+      alert(cadena2);
+
+      for (let i = 1; i < 5; i++) {
+        //con eval asignamos a p como una variable de coche
+        p = eval("coche" + i);
+        alert(
+          "El coche: " +
+            p.marca +
+            " cuesta: " +
+            p.precio +
+            " mas Iva: " +
+            p.SumaI()
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

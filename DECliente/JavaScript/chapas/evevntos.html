@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function saludo() {
+        alert("Hola, la funcion se ejecuta cuando se carga la pagina()onload");
+      }
+
+      function mayusculas() {
+        campo.value = campo.value.toUpperCase;
+        myform.nada.value = "pato";
+      }
+
+      function confirmar() {
+        var res = confirm("Desae borrar??");
+        return res;
+      }
+      function nomedeja(campo) {
+        if (campo.value != "capullo");
+        campo.focus();
+        campo.select();
+      }
+
+      function ver() {
+        var g = myform.nombre.value;
+        alert(g.charAt(2));
+      }
+    </script>
+  </head>
+  <body onload="saludo()">
+    <center>
+      <h2>CHAPA 12 evevntos</h2>
+
+      <!-- Solo se ejecuta si el onreset devuelve true -->
+      <form
+        name="myform"
+        onreset="return confirmar()"
+        onsubmit="return confirmar()"
+      >
+        <br /><br />
+        Nombre:
+        <input
+          type="text"
+          name="=nombre"
+          value=""
+          size="5"
+          onchange="mayusculas(this)"
+          onblur="nomedeja()"
+        />
+        <br /><br />
+        <input type="text" name="=nada" /> <br /><br />
+
+        <input
+          type="reset"
+          value="Limpiar"
+          onmouseover="this.value='patata'"
+          onmouseout="this.value='patata'"
+        />
+        <input type="submit" value="Enviar" onsubmit="ver()" />
+
+        <input type="button" value="Strings" onclick="ver()" />
+      </form>
+    </center>
+  </body>
+</html>

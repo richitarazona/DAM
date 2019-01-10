@@ -1,0 +1,63 @@
+header > h1 {
+  color: darkcyan;
+}
+nav + header {
+  color: grey;
+}
+nav li {
+  background-color: aquamarine;
+}
+
+nav li:nth-child(odd) {
+  background-color: darkslategray;
+  color: aliceblue;
+}
+nav li:nth-child(even) {
+  background-color: deepskyblue;
+}
+nav li a:nth-child(odd) {
+  color: darkslategray;
+}
+nav li a:nth-child(even) {
+}
+
+article p:nth-of-type(1) {
+}
+
+p ~ h3 {
+}
+article {
+}
+
+article a[href*="http"] section pre {
+}
+
+article section:last-child {
+}
+
+section li {
+}
+
+h1 {
+  color: white;
+}
+h2 {
+  color: blanchedalmond;
+}
+h3 {
+}
+
+*:hover {
+  color: red;
+}
+
+h1::first-letter {
+  color: white;
+}
+
+pre::before {
+  content: "codigo";
+}
+section::before {
+  content: "**************************************************************************";
+}

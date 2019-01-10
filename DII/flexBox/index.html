@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="cabecera">
+        <div class="titulo"><h1>Flexbox</h1></div>
+        <div class="buscar">
+          <form class="formu" action="">
+            <input type="search" placeholder="buscar" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#comofundicona">¿Cómo funciona?</a></li>
+        <li><a href="#contenedor">Contenedor flex, propiedades</a></li>
+        <li><a href="#hijos">Flex items, propiedades</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h1>Flexbox</h1>
+        <article id="comofunciona">
+          <h2>¿Cómo funciona <code>flexbox</code>?</h2>
+          <p>
+            Bueno, para comenzar a utilizar las bondades de Flexbox lo primero
+            que debemos de hacer es establecer la propiedad display con el valor
+            <code>flex</code> en el elemento padre.
+          </p>
+          <code>
+            <pre>
+.flex-container {
+	display: flex; /* ó inline-flex */
+}
+						</pre
+            >
+          </code>
+          <p>
+            <code>display: flex o display: inline-flex</code> Son los valores de
+            la propiedad display que necesitamos para configurar el contenedor
+            principal y de esta manera todos sus hijos inmediatos se convertirán
+            en elementos flexibles de forma automática.
+          </p>
+          <p>
+            La única diferencia que hay entre los valores
+            <code>flex y inline-flex</code> es la disposición en la que esta se
+            establece en el documento, al final es similar al establecimiento de
+            display: block y display: inline-block.
+          </p>
+        </article>
+        <article id="contenedor">
+          <h2>Propiedades para el contenedor <code>flex</code></h2>
+          <section>
+            <h3>flex-direction</h3>
+            <p>
+              Esta propiedad especifica cómo colocar los objetos flexibles en el
+              contenedor flexible definiendo el eje principal y la dirección en
+              el flex-conteiner. permite manejar el direccionamiento de los flex
+              items, es decir cambiar el flujo normal de los elementos flexibles
+              en el main axis. Esta propiedad tiene múltiples valores que nos
+              van a permitir variar de todas las formas el direccionamiento de
+              los elementos hijos flexibles. Sus valores son:
+            </p>
+            <code
+              >flex-direction:row (por defecto) | row-reverse | column |
+              column-reverse
+              <pre>
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+							</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>flex-wrap</h3>
+            <p>
+              El comportamiento inicial del contenedor flexible es poder
+              mantener los flex items en su main axis o eje horizontal sin
+              importar que las dimensiones de estos items cambien, pero hay
+              ocasiones donde vamos a querer controlar este alineamiento y hacer
+              que los elementos puedan saltar de línea para poder mantener una
+              apariencia deseada en estos flex items. Con flex-wrap vamos a
+              poder especificar las líneas del contenedor flexible, si queremos
+              un contenedor de una línea o un contenedor multilínea para con sus
+              flex-items. Sus valores son:
+            </p>
+            <code
+              >flex-wrap:nowrap (por defecto) | wrap | wrap-reverse
+              <pre>
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap /* valor por defecto*/
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            // flex-flow
+            <h3>flex-flow</h3>
+            <p>
+              La propiedad flex-flow es simplemente la forma rápida para las
+              propiedades flex-direction y flex-wrap vistas anteriormente. Los
+              valores que se aplican por defecto a esta propiedad son las mismas
+              que se aplican a las propiedades que están actuando como valor.
+              Sus valores son:
+            </p>
+            <code
+              >flex-flow: valores de la propiedad flex-direction | valores de la
+              proiedad flex-wrap
+              <pre>
+.flex-container {
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            // justify-content
+            <h3>justify-content</h3>
+            <p>
+              Nos va a permitir alinear los elementos en el eje principal (main
+              axis) del contenedor flexible, esto puede ser de forma vertical o
+              horizontal según lo especifiquemos con flex-direction, también nos
+              va a ayudar a distribuir los flex items en el contenedor flexible
+              cuando los items no utilicen todo el espacio disponible en su eje
+              principal actual. Esto es declarar la forma en que el navegador
+              debe distribuir el espacio disponible entre los items flexibles.
+              Sus valores son:
+            </p>
+            <code
+              >justify-content: flex-start (por defecto) | flex-end | center |
+              space-between | space-around
+              <pre>
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            // align-items
+            <h3>align-items</h3>
+            <p>
+              nos permite establecer la alineación que tendrán por defecto los
+              flex item en el Cross axis (Eje secundario), es similar a la
+              propiedad justify-content pero esta vez la dirección es
+              perpendicular al main axis del contenedor flex. Sus valores son:
+            </p>
+            <code
+              >align-items: stretch (por defecto) | flex-start | flex-end |
+              center | baseline
+              <pre>
+.flex-container {
+    display: flex;
+    align-items: stretch;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            //align-content
+            <h3>align-content</h3>
+            <p>
+              Ajusta las líneas dentro del flex container cuando hay espacio
+              extra en el eje secundario. Esta propiedad sólo tiene efecto
+              cuando el contenedor flexible es multi-línea, y esto solo lo
+              hacemos por medio de los valores wrap y wrap-reverse de la
+              propiedad flex-wrap. Sus valores son:
+            </p>
+            <code
+              >align-content: stretch (por defecto) | flex-start | flex-end |
+              center | space-between | space-arount |
+              <pre>
+.flex-container {
+    display: flex;
+    align-content: stretch;
+}
+</pre
+              >
+            </code>
+          </section>
+        </article>
+
+        <article id="hijos">
+          <h2>Propiedades aplicables a los flex items</h2>
+          <p>
+            Como ya sabes, cuando nos referimos a los flex items nos referimos a
+            los hijos directos del contenedor flexible. Veamos las diferentes
+            propiedades que se aplican a estos elementos.
+          </p>
+          <section>
+            <h3>Order</h3>
+            <p>
+              nos ayuda a especificar el orden para disponer los elementos en su
+              contenedor flexible. Los elementos se dispondran en orden
+              ascendente según el valor de la propiedad order. Los elementos con
+              el mismo valor de order se dispondrán en el orden en el cual
+              aparecen en el DOM.
+            </p>
+            <code
+              >order:n;
+              <pre>
+.flex-item-1 {
+    order: 3;
+}
+.flex-item-2 {
+    order: 0;
+}
+.flex-item-3 {
+    order: 1;
+}
+.flex-item-4 {
+    order: 2;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>Flex-grow</h3>
+            <p>
+              Especifica el factor de crecimiento del flex items, podemos en su
+              valor determinar hasta que punto el flex item crecerá en relación
+              al resto de ítems que se distribuyen el espacio disponible dentro
+              del contenedor flexible.
+            </p>
+            <code
+              >flex-grow:n;
+              <pre>
+.flex-item-1 {
+    flex-grow: 1;
+}
+.flex-item-2 {
+    flex-grow: 1;
+}
+.flex-item-3 {
+    flex-grow: 1;
+}
+.flex-item-4 {
+    flex-grow: 1;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>Flex-shrink</h3>
+            <p>
+              Permite especificar el valores de encogimiento o contracción en
+              los elementos flexibles. Es decir, todo lo contrario a flex-grow.
+              Con el valor indicado en números especificaremos cuánto se
+              reducirá el item con respecto al resto de ítems dentro del
+              contenedor flexible cuanto el espacio en este es negativo, osea
+              cuando la suma total de los flex items supera el espacio
+              disponible en el flex container. El valor inicial es 1.
+            </p>
+            <code
+              >flex-shrink:n;
+              <pre>
+.flex-item-1 {
+    flex-shrink: 1;
+}
+.flex-item-2 {
+    flex-shrink: 1;
+}
+.flex-item-3 {
+    flex-shrink: 2; //la mitad
+}
+.flex-item-4 {
+    flex-shrink: 1;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>Flex-basis</h3>
+            <p>
+              Permite establecer el tamaño base del main size del flex item que
+              de forma predeterminada actuaria como el width del elemento
+              flexible. Los valores que podemos aplicar son los mismo que usamos
+              para las propiedades tradicionales width y height. El valor por
+              defecto e inicial es auto
+            </p>
+            <code
+              >flex-basis:auto|px|em|rem;
+              <pre>
+.flex-item-1 {
+    flex-basis: auto;
+}
+.flex-item-2 {
+    flex-basis: auto;
+}
+.flex-item-3 {
+    flex-basis: 16rem; 
+}
+.flex-item-4 {
+    flex-basis: auto;
+}
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>Flex</h3>
+            <p>
+              La propiedad flex es el método shorthand o forma rápida para
+              especificar en una sola propiedades los valores de flex-grow,
+              flex-shrink y flex-basis. Los valores por defecto son 0, 1, auto.
+            </p>
+            <code
+              >flex:flex-grow flex-shrink flex-basis;
+              <pre>
+flex: 2 2 10%; /* Tres valores: flex-grow | flex-shrink | flex-basis */
+flex: 1 30px; /* Especificamos dos valores: flex-grow | flex-basis */
+flex: 2 2; /* Dos valores sin unidades: flex-grow | flex-shrink */
+flex: auto; /* Especificamos los valores por defecto de cada propiedad */
+flex: none; /* Anulamos las características de las propiedades: (0 0 auto)*/
+</pre
+              >
+            </code>
+          </section>
+          <section>
+            <h3>Align-self</h3>
+            <p>
+              Nos permite especificar la alineación de algún flex item en
+              particular dentro del contenedor flexible en el cross axis o eje
+              secundario.
+            </p>
+            <code
+              >align-self:auto (por defecto) | flex-start | flex-end | center |
+              baseline | stretch;
+              <pre>
+align-self: auto ;
+align-self: center; 
+align-self: flex-end;
+align-self: flex-star;
+align-self: stretch; 
+</pre
+              >
+            </code>
+          </section>
+        </article>
+      </article>
+    </main>
+  </body>
+</html>

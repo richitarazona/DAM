@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(51, 43, 23);
+    padding: 2%;
+    margin-top: .5%;
+}
+
+
+.primero{
+    background-color: chocolate;
+    padding: 5%;
+}
+
+.segundo{
+    background-color: coral;
+    padding: 5%;
+}
+
+
+.tercero{
+    background-color: darkorange;
+    padding: 5%;
+}
+
+.cuarto{
+    background-color: darksalmon;
+    padding: 5%;
+}
+
+.imagenes{
+   margin: auto;
+   width: 100%;
+   height: auto;
+}

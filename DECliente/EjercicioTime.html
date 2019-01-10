@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function andarReloj() {
+        setInterval("mostrar()", 1000);
+      }
+      function mostrar() {
+        horaActual = new Date();
+        hora = horaActual.getHours();
+        minuto = horaActual.getMinutes();
+        segundo = horaActual.getSeconds();
+        momento = hora + ":" + minuto + ":" + segundo;
+        miform.reloj.value = momento;
+      }
+    </script>
+  </head>
+  <body onload="andarReloj()">
+    <center>
+      <form name="miform"><input type="text" name="reloj" size="10" /></form>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHAPA02</title>
+
+
+    <script type="text/javascript">
+
+        //funcion global, me sirve para todo el codigo, ls esribiremos fuera de los scrpts
+        var i = 12;
+        function patata() {
+
+            //si declaro var , esta solo pertenece a la funcion, funcion local
+            var i = 7;
+            document.write("patata<br>");
+            document.write(i + " <br>");
+        }
+    </script>
+</head>
+
+<body>
+
+    HOLA HOLA
+    <script type="text/javascript">
+
+        patata(); {
+            document.write(i + "<br>")
+
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

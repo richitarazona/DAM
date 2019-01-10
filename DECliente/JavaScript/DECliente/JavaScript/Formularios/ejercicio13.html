@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SELECT</title>
+
+    <script>
+      function informar() {
+        var mensaje = "";
+        mensaje +=
+          "Has seleccionado:" +
+          document.formCerve.cerveza.value +
+          "Cerveza" +
+          document.formLitros.Tamaño.value;
+        alert(mensaje);
+
+        /* for (i = 0; i < formCerve.cerveza.length; i++) {
+          if (formCerve.cerveza.options[i].selected)
+            alert(formCerve.cerveza.options[i].value);
+        }*/
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2>Marca de Cerveza</h2>
+      <form name="formCerve">
+        <br />
+        <br />
+        <select name="cerveza" size="1">
+          <option value="Mahou">Mahou</option>
+          <option value="San Miguel">San Miguel</option>
+          <option value="Ambar">Ambar</option>
+        </select>
+      </form>
+      <h2>Marca de Cerveza</h2>
+      <form name="formLitros">
+        <br />
+        <br />
+        <select name="Tamaño" size="3">
+          <option value="1/4">1/4</option>
+          <option value="1/2">1/2</option>
+          <option value="Litro">Litro</option>
+        </select>
+
+        <input
+          type="button"
+          value="Enviar"
+          name="enviar"
+          onclick="informar()"
+        />
+        <input type="reset" value="Borrar" />
+      </form>
+    </center>
+  </body>
+</html>

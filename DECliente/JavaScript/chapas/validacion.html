@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VALIDACION</title>
+
+    <script>
+            function mostrar() {
+              var mensaje = "";
+              mensaje +=
+                "Nombre:" +
+                document.miformulario.nombre.value +
+                "Cerveza" +
+                document.formLitros.Tamaño.value;
+              alert(mensaje);
+      
+              /* for (i = 0; i < formCerve.cerveza.length; i++) {
+                if (formCerve.cerveza.options[i].selected)
+                  alert(formCerve.cerveza.options[i].value);
+              }*/
+            }
+          </script
+  </head>
+  <body>
+    <center>
+      <h2>*****VALIDACION*****</h2>
+      <form name="miformulario">
+        Nombre: <input type="text" name="nombre" /> Introduzca un nombre.
+        <br /><br />
+        Direccion: <input type="text" name="apellidos" id="" /> <br /><br />
+        Pais:
+        <select name="pais" id="">
+          <option value="italia">ITALIA</option>
+          <option value="francia">FRANCIA</option>
+          <option value="austria">AUSTRIA</option>
+          <option value="alemania">ALEMANIA</option>
+          <option value="Australia">AUSTRALIA</option>
+        </select>
+        <br /><br />
+
+        Sexo: <input type="radio" name="sexo" checked /> Masculino
+        <input type="radio" name="sexo" /> femenino <br /><br />
+        Preferencias:
+        <input type="checkbox" name="preferencias" value="rojo" /> Rojo
+        <input type="checkbox" name="preferencias" value="amarillo" /> Amarillo
+        <input type="checkbox" name="preferencias" value="negro" /> Negro
+        <input type="checkbox" name="preferencias" value="blanco" /> Blanco
+        <br /><br />
+
+        <input type="button" value="Enviar" onclick="mostrar()" />
+        <input type="reset" value="Borrar" />
+      </form>
+    </center>
+  </body>
+</html>

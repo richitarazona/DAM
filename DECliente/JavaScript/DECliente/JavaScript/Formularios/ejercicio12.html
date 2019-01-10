@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            function calcula(operacion){
+                var operando1 = document.calc.operando1.value
+                var operando2 = document.calc.operando2.value 
+                var result = eval(operando1 + operacion + operando2)
+                document.calc.resultado.value = result
+            }
+     </script> 
+
+    <!--  <script>
+         function calcula(recibo){
+             switch (recibo.value){
+             case "+":
+             miformulario.res.value = parseFloat(miformulario.num1.value) + parseFloat(miformulario.num2.value);
+             break;
+             case "-":
+             miformulario.res.value = parseFloat(miformulario.num1.value) - parseFloat(miformulario.num2.value);
+             break;
+             case "*":
+             miformulario.res.value = parseFloat(miformulario.num1.value) * parseFloat(miformulario.num2.value);
+             break;
+             case "/":
+             miformulario.res.value = parseFloat(miformulario.num1.value) / parseFloat(miformulario.num2.value);
+             break;
+        
+          }} -->
+     
+     
+     </script>
+
+
+</head>
+<body>
+    <center>
+        <form name="calc" >
+            <h2>Calculadora</h2>
+                Introduce un numero:  <input type="Text" name="operando1" value="0" size="12">
+                <br>
+                Introduce un numero:  <input type="Text" name="operando2" value="0" size="12">
+                <br>
+                <h3>Que operacion quieres realizar</h3>
+                <input type="Button" name="" value=" + " onclick="calcula('+')">
+                <input type="Button" name="" value=" - " onclick="calcula('-')">
+                <input type="Button" name="" value=" X " onclick="calcula('*')">
+                <input type="Button" name="" value=" / " onclick="calcula('/')">
+                <br>
+                <br>
+                <!-- <h3>Que operacion quieres realizar</h3>
+                <input type="Button" name="recibo" value=" + " onclick="calcula(this)">
+                <input type="Button" name="recibo" value=" - " onclick="calcula(this)">
+                <input type="Button" name="recibo" value=" X " onclick="calcula(this)">
+                <input type="Button" name="recibo" value=" / " onclick="calcula(this)">
+                <br> -->
+                <h4>Resultado</h4>
+                <input type="Text" name="resultado" value="0" size="12">
+                </form>
+            </center>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>STRINGS</title>
+
+    <script>
+      var miCadena = "Soy una chapa de JavaScript";
+      var longitud = miCadena.length;
+      var cadena = "Hoy es martes y el que viene tambien es martes";
+      //nos devuelve la posicion de la palabra
+      /*   alert(cadena.indexOf("martes"));
+      alert(cadena.lastIndexOf("martes")); */
+      //extraigo un caracter segun su posicion
+      alert(cadena.charAt(4));
+      //Extrae una porcion de la cadena
+      alert(cadena.slice(2, 5));
+      //Extrae un aporcion de la cadena desde la posicion y el numero de caracteres
+      alert(cadena.substring(7, 6));
+      //nos crea un aarry de tres elementos
+      var cadena = "Hoy  es domingo";
+      var matrizcadena = cadena.split(" ");
+      alert(matrizcadena[0]);
+      alert(cadena.toLowerCase());
+      alert(cadena.toUpperCase());
+
+      var cadena = "   Hoy  es domingo    ";
+      String.prototype.quitarespacios = quitar;
+
+      function quitar() {
+        var resultado = this.trim();
+        return resultado;
+      }
+
+      var cadenaLImpia = cadena.quitarespacios();
+      alert(cadena.length);
+      alert(cadenaLImpia.length);
+    </script>
+  </head>
+  <body></body>
+</html>

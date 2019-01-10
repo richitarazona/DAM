@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="scriptArrays.js" />
+    <title>Document</title>
+
+    <script>
+      //   var nombres = new array();
+      //   var nombres = new array(5);
+      //   var nombres = new array("a", "b", "c", "d", "f");
+      //   var nombres = new array[("a", "12.25", "true", "d", "f")]();
+
+      //   var matriz1 = ["Cinco", "Seis", "Siete"];
+      //   var matriz2 = ["Cinco", "ocho", "Nueve"];
+      //   var matriz3 = matriz1.concat(matriz2);
+      //   alert(matriz3);
+
+      //   var cadena;
+      //   cadena = matriz.join(","); //nos une el array con el simbolo que ponamos como parametro
+      //   alertr(cadena.charAt(2));
+
+      var fecha = "24/04/1998";
+      var elemento = fecha.split("/");
+      alert(elemento[0]);
+      alert(elemento[1]);
+      alert(elemento[2]);
+      alert(elemento);
+
+      var texto = "soy un rapero de Brañain";
+      var elemento = texto.split(" ");
+      alert(elemento[0]);
+      alert(elemento[1]);
+      alert(elemento[2]);
+      alert(elemento);
+
+      var matrizF = ["Cinco", "ocho", "Nueve"];
+      // cadena = matrizF.pop();//quita el ultimo elemento
+      cadena = matrizF.push("Cinco", "Seis"); //añade elementos
+      alert(cadena);
+      alert(matrizF);
+      matrizF.shift(); //quita elementos del principio
+      matrizF.unshift(); //añade elementos al principio
+
+      var m2 = matrizF.reverse(); //devuelve el la cedan del reves, el ultimo elemnto sera el primero.
+      matrizF.sort(); //
+      alert(matrizF);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clases</title>
+  </head>
+  <body>
+    <script>
+      class Factura {
+        constructor(numero, cliente, divisa, SubTotal, IVA) {
+          this.numero = numero;
+          this.cliente = cliente;
+          this.divisa = divisa;
+          this.SubTotal = SubTotal;
+          this.IVA = IVA;
+        }
+
+        get total() {
+          return this.SubTotal + this.IVA;
+        }
+
+        set nuevaDivisa(valor) {
+          this.divisa = valor;
+        }
+
+        aplicarDescuento(porcentaje) {
+          this.SubTotal -= (this.SubTotal / 100) * porcentaje;
+        }
+
+        static function inicio() {
+            console.log("Empieza la funcion");
+        }
+    }
+
+      factura1.inicio();
+      const factura1 = new Factura(123, "Richi", "Dolar", 125, 23);
+      const factura2 = new Factura(124, "Javi", "Euro", 563, 23);
+
+      console.log(factura1.numero + " " + factura1.divisa);
+      console.log(factura1.total);
+      factura2.nuevaDivisa = "Peso";
+      console.log(factura2.divisa);
+      factura2.aplicarDescuento(50);
+      console.log(factura2.SubTotal);
+    </script>
+  </body>
+</html>

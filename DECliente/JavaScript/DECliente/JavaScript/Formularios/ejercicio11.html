@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      function mostrar() {
+        if (document.miformulario.nombre.value == "") {
+          alert("El campo nombre debe de estar rellenado");
+          return;
+        }
+        if (document.miformulario.apellido.value == "") {
+          alert("El campo apellido debe de estar rellenado");
+          return;
+        }
+        //creamos una variable y vamos concatenando los resultados
+        var mensaje = "";
+        mensaje += "nombre: " + document.miformulario.nombre.value;
+        mensaje += "\napellido: " + document.miformulario.apellido.value;
+        mensaje += "\nEstado: " + document.miformulario.estado.value;
+        mensaje += "\nAficiones: ";
+
+        for (i = 0; i < document.miformulario.aficiones.length; i++) {
+          if (document.miformulario.aficiones[i].checked) {
+            mensaje += " * " + document.miformulario.aficiones[i].value;
+          }
+        }
+        alert(mensaje);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Datos</h2>
+    <form name="miformulario">
+      Nombre:<input name="nombre" type="text" size="19" /><br />
+      Apellido:<input name="apellido" type="text" size="19" /><br />
+
+      <h2>Estado Civil:</h2>
+      <br /><input type="radio" name="estado" checked />Soltero<br />
+      <input type="radio" name="estado" value="casado" />Casado<br />
+      <h2>Aficiones</h2>
+      <br /><br />
+      <input type="checkbox" name="aficiones" value="cine" />Cine<br /><br />
+      <input
+        type="checkbox"
+        name="aficiones"
+        value="musica"
+      />Musica<br /><br />
+      <input type="checkbox" name="aficiones" value="baile" />Baile <br /><br />
+
+      <input type="button" value="enviar" onclick="mostrar()" />
+      <input type="reset" value="borrar" />
+    </form>
+  </body>
+</html>

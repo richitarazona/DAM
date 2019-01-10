@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validaciones</title>
+
+    <script>
+    function validar(){
+       
+        if(document.form.nombre.value == ""){
+            var mensaje= "";
+            mensaje += "Debe introducir Nombre \n"
+            
+            
+        }
+         if(document.form.apellidos.value == ""){
+            mensaje +="Debe introducir apellidos\n"
+            
+        }
+        if(document.form.pais.value == ""){
+            mensaje += "Debe introducir pais\n"
+            
+        }
+         if(document.form.preferencias.value == ""){
+            mensaje += "Debe introducir alguna preferencia\n"
+            
+        }
+    
+        alert(mensaje);
+    }
+    </script>
+
+    <script>
+    function mostrar(){
+
+
+
+        var mensaje= "";
+        mensaje +="has seleccionado: \n Nombre: " +
+        document.form.nombre.value +
+        "  \n Apellidos:  " + 
+        document.form.apellidos.value +
+        "  \n Pais:  " +
+        document.form.pais.value + 
+        "  \n Sexo:  " +
+        document.form.sexo.value ; 
+      /*   mensaje += "\n Aficiones:";
+        
+        for (i = 0; i < document.form.preferencias.length; i++) {
+        if (document.form.preferencias[i].checked) {
+      mensaje += " * " + document.form.preferencias[i].value;
+    } */
+        
+        
+    alert(mensaje);
+
+    }//mostrar
+  
+    
+    </script> -->
+
+
+
+</head>
+<body>
+
+    <center>
+        <!-- //Cuando se envia, primero devuleve el valos de funcion validar -->
+        <form action="" onsubmit="return validar()"></form>
+        <form name="form">
+            <h2>*Validaciones*</h2>
+            
+             Nombre:<input id="name"  autofocus type="text" name="nombre"><br><br>
+             Apellidos: <input type="text" name="apellidos" ><br><br>
+            Seleccione un pais:    <select name="pais"  size="1">
+                <option value="francia" name="francia">Francia</option>
+                <option value="italia" name="italia">Italia</option>
+                <option value="alemania" name="alemania">Alemania</option>
+                <option value="rusia" name="rusia">Rusia</option>
+                     </select><br><br>
+             Sexo:Hombre: <input type="radio" name="sexo" value="Masculino" checked>
+             Mujer:<input type="radio" name="sexo" value="Femenino" ><br><br>
+
+             Preferencias:Rojo<input type="checkbox" name="preferencias" value="rojo">
+             Amarillo:<input type="checkbox" name="preferencias" value="amarillo">
+             Azul:<input type="checkbox"  name="preferencias" value="azul">
+             Negro:<input type="checkbox" name="preferencias" value="negro"><br><br>
+
+             <input type="button" value="enviar" name="enviar" onclick="mostrar()"/>
+             <input type="reset" value="borrar">
+             <input type="button" value="validacion" name="validacion" onclick="validar()"/>
+
+
+        </form>
+
+    </center>
+
+
+    
+</body>
+</html>

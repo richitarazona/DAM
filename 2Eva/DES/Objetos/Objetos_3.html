@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Objetos Anidadis</title>
+  </head>
+  <body>
+    <script>
+      var factura = {
+        numero: 234,
+        cliente: "Richi",
+        vencimientos: {
+          1: { fecha: new Date(2019, 03, 20), importe: 222 },
+          2: { fecha: new Date(2019, 03, 20), importe: 333 },
+          3: { fecha: new Date(2019, 03, 20), importe: 444 }
+        }
+      };
+
+      var numeroFactura = factura.numero;
+      var importe3vto = factura.vencimientos[3].importe;
+      alert(numeroFactura);
+      alert(importe3vto);
+      //se pueden crear funciones solo para los objetos facturas
+      factura.imprimir = function() {
+        document.write(this.numero);
+        document.write(this.cliente);
+
+        factura.imprimir();
+      };
+    </script>
+  </body>
+</html>

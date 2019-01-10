@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reloj_2</title>
+    <script>
+      var tiempo = 0;
+      function intervalo() {
+        periodo = setInterval("mostrar()", 1000);
+      }
+      function mostrar() {
+        tiempo += 1;
+        miform.caja.value = tiempo;
+      }
+      function anular() {
+        clearInterval(periodo);
+        miform.caja.value = "Me he parado";
+      }
+    </script>
+  </head>
+  <body onload="intervalo()">
+    <center>
+      <form name="miform">
+        <input type="text" name="caja" size="35" /><br /><br />
+        <input type="button" name="anulo" value="Anular" onclick="anular()" />
+      </form>
+    </center>
+  </body>
+</html>

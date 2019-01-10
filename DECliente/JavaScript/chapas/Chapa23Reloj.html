@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reloj1</title>
+    <script>
+      function mensaje() {
+        alert("Han transcurrido 5 segundos");
+        document.miforn.dato.value = "HOLA";
+        document.bgColor = "#00FFFF";
+      }
+      function retraso() {
+        miforn.dato.value = "Esto se borra a los 5 segundos";
+        /*   //a los 6 segundos ejecuta borrar */
+        demora = setTimeout("borrar()", 6000);
+      }
+      function anular() {
+        miforn.dato.value = "No me voy a aborrar";
+        clearTimeout(demora);
+        return true;
+      }
+      function borrar() {}
+    </script>
+  </head>
+  <!-- //cuando cargue la pagina y se acab el tiempo a los 5 segundos -->
+  <body onload="setTimeout('mensaje()',5000)">
+    <center>
+      <form name="miform">
+        <input
+          type="text"
+          name="dato"
+          size="35"
+          valeu="Espere 5 segundos"
+        /><br /><br />
+        <input
+          type="button"
+          name="activo"
+          value="comprobar"
+          onclick="retraso()"
+        />
+        <input
+          type="button"
+          name="anulo"
+          value="Paro el retarso"
+          onclick="anular()"
+        />
+      </form>
+    </center>
+  </body>
+</html>

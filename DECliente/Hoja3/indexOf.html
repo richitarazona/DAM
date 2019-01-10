@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <form name="miformulario">
+        <h2>***INDEX OF***</h2>
+        Nombre: <input type="text" name="nombre" /><BR></BR>
+         CP: <input type="text" name="cp" id="cp" /><br><br>
+          <input type="button" value="ENVIAR" onclick="validar()"/>
+      </form>
+
+
+      <script>
+        document.getElementById('cp').addEventListener('blur', function(){
+         var cp = document.getElementById('cp');
+         if (isNaN( cp.value) || cp.value.lenght != 5) {
+           cp.select();
+         cp.focus();
+         }
+         
+        })
+      </script>
+    </center>
+  </body>
+</html>

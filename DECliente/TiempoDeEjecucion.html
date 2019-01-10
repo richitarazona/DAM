@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      window.onload = function() {
+        var botoncito = document.createElement("button");
+        botoncito.innerHTML = "createElement";
+        botoncito.setAttribute("id", "btttt");
+        document.getElementById("contiene").appendChild(botoncito);
+
+        var bb = document.getElementById("btttt");
+        bb.onclick = function() {
+          alert("Felices fiestas");
+        };
+      };
+    </script>
+    <title>Create Element</title>
+  </head>
+  <body>
+    <div id="contiene"></div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function sumar() {
+        var suma = 0;
+        for (i = 0; i < this.length; i++) {
+          suma += this[i];
+        }
+        return suma;
+      }
+
+      //ayuda a crear metodos para los arrays
+      Array.prototype.totalizar = sumar;
+      var edades = [34, 3, 4, 4];
+      var total = edades.totalizar();
+      alert(total);
+    </script>
+  </head>
+  <body>
+    <center><h2>Metodos para arrays</h2></center>
+  </body>
+</html>

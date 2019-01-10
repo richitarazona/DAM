@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fechas_1</title>
+
+    <script>
+      var fecha = new Date();
+      document.write(fecha);
+      //para sacar el año de la fecha
+      document.write("<br>" + fecha.getFullYear());
+
+      //
+      document.write("<br>" + fecha.getYear());
+      //Obtener los meses
+      document.write("<br>" + fecha.getMonth());
+      //Obtener el dia
+      document.write("<br>" + fecha.getDate());
+      //Obtener el dia de la semana
+      document.write("<br>" + fecha.getDay());
+
+      //introducimos las fechas de esta manera
+      var fechanueva = new Date(2018, 12, 9);
+      document.write(fecha);
+      //para sacar el año de la fecha
+      document.write("<br>" + fechanueva.getFullYear());
+      //
+      document.write("<br>" + fechanueva.getYear());
+      //Obtener los meses
+      document.write("<br>" + fechanueva.getMonth());
+      //Obtener el dia
+      document.write("<br>" + fechanueva.getDate());
+      //Obtener el dia de la semana
+      document.write("<br>" + fechanueva.getDay());
+    </script>
+
+    <script>
+      var meses = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      ];
+      var dias = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miercoles",
+        "Jueves",
+        "Viernes",
+        "Sabado"
+      ];
+
+      var dia = dias[fecha.getDay()];
+      var mes = meses[fecha.getMonth()];
+
+      var resultado = "Estamos a " + dia + " del mes de: " + mes;
+      alert(resultado);
+    </script>
+    <script>
+      //calcular los dias entre fechas
+      document.write("<br>" + fecha.getHours());
+      document.write("<br>" + fecha.getMinutes());
+      document.write("<br>" + fecha.getSeconds());
+      document.write("<br>" + fecha.getMilliseconds());
+
+      //calcular fechas entre dias
+      //introdcimos una fecha
+      var fechanacimineto = new Date(1960, 10, 1);
+      //otra manera de introducir una fecha
+      var fechaHoy = new Date();
+      var fechaHoy2 = new Date(10 / 12 / 2018);
+      alert(fechaHoy2);
+      //getTime da la diferencia en milisegundos
+      var dias = fechaHoy.getTime() - fechanacimineto.getTime();
+      var t1 = dias / (24 * 60 * 60 * 1000);
+      alert(t1); //dias que han pasado
+      alert(t1 / 365); //años que han pasado
+
+      //para obtener las horas
+      var fecha = new Date();
+      alert(fecha.getUTCHours());
+    </script>
+  </head>
+  <body></body>
+</html>

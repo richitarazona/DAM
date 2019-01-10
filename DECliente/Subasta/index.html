@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body onload="andarReloj()">
+    <center>
+      <form name="miform"><input type="text" name="reloj" size="10" /></form>
+      <br />
+      <input type="button" value="Empezar subasta" /> <br /><br />
+      <input type="checkbox" name="sumaTiempo" value="1 minuto" />
+      <label>1 minuto</label>
+      <input type="checkbox" name="sumaTiempo" value="15 minutos" />
+      <label>15 minutos</label>
+      <input type="checkbox" name="sumaTiempo" value="15 hora" />
+      <label>1 hora</label><br /><br />
+
+      <label>Tiempo restante para la subasta</label>
+      <input type="text" name="tiempoRestante" size="15" /><br /><br />
+      <input
+        type="button"
+        name="btoferta"
+        onclick="añadirOfertas()"
+        value="Oferta a Realizar"
+      />
+      <input type="text" name="oferta" size="8" /><br /><br /><br />
+      <label>Oferta Realizadas</label>
+      <select name="ofertasRealizadas" id="ofer"></select>
+    </center>
+  </body>
+</html>

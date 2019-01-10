@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      window.onload = function() {
+        var b1 = document.getElementById("bt1");
+        b1.onclick = function() {
+          var caja_estilo = document
+            .getElementById("caja")
+            .getAttribute("style");
+          alert(caja_estilo);
+        };
+        b2.onclick = function() {
+          var caja_estilo = document
+            .getElementById("caja")
+            .removeAttribute("style");
+          alert(caja_estilo);
+        };
+      };
+    </script>
+    <title>Get Attribute</title>
+  </head>
+  <body>
+    <div id="caja" style="background: red;color:whithe;padding: 20px"></div>
+    <button id="bt1">Obtener el valor del atributo</button>
+    <button id="bt2">Eliminar el valor del atributo</button>
+    <button id="bt1">Obtener el valor del atributo</button>
+  </body>
+</html>

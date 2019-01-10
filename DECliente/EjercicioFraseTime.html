@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var texto1 = ["H", "o", "l", "a", "a", "m", "i", "g", "o", "s"];
+      //var texto = "Hola amigos";
+      var cont = 0;
+      var textoMostrar = "";
+      function cargar() {
+        setInterval("mostrar()", 1000);
+      }
+      function mostrar() {
+        //var letra = texto.charAt(cont);
+        //textoMostrar += letra;
+        textoMostrar += texto1[cont];
+        miform.frase.value = textoMostrar;
+        cont++;
+        if (cont == texto1.length) {
+          textoMostrar = "";
+          cont = 0;
+        }
+      }
+      function parando() {
+        miform.frase.value = "Me he parado";
+        clearInterval();
+      }
+    </script>
+  </head>
+  <body onload="cargar()">
+    <center>
+      <label>Texto cambiante</label>
+      <form name="miform">
+        <input type="text" name="frase" size="35" />
+        <input type="button" name="parar" onclick="parando()" />
+      </form>
+    </center>
+  </body>
+</html>

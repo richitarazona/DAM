@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SELECT</title>
+
+    <script>
+      function informar() {
+        //alert(document.miformulario.provincia.selectedIndex); //devuelve el indice del elemento seleccionado
+        //alert(document.miformulario.provincia.value);//me coge el value del seleccionado.
+        //alert(document.miformulario.provincia.options[1].value);
+        //alert(document.miformulario.provincia.options[1].text);//accede al texto del select
+
+        /* var indice =documentm.miformulario.provincia.options.selectIndex;
+        alert(document.miformulario.provincia.options[indice].value);
+        alert(document.miformulario.provincia.options[indice].text); */
+
+        //alert(document.miformulario.provincia.options[1].selected);//nos indica si la opcion esta seleccionada TRUE_-FALSE
+        //alert(document.miformulario.provincia.options[1].selected);
+        for (i = 0; i < miformulario.provincia.length; i++) {
+          if (miformulario.provincia.options[i].selected)
+            alert(miformulario.provincia.options[i].value);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2>Select</h2>
+      <form name="miformulario">
+        <br /><br />
+        Seleccione Provincia.... <br /><br />
+        <select name="provincia" size="1" multiple
+          >//me deja selecionar multiples opciones
+          <!-- //Size es el numero de elementos que aparecen en la lista -->
+          <option value="Oviedo">ASTURIAS</option>
+          <option value="Pamplona" selected>NAVARRA</option>
+          <option value="Valencia">VALENCIA</option>
+        </select>
+
+        <input
+          type="button"
+          value="Enviar"
+          name="enviar"
+          onclick="informar()"
+        />
+      </form>
+    </center>
+  </body>
+</html>
+
+<!---->

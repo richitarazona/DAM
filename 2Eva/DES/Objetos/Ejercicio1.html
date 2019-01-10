@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio</title>
+  </head>
+  <body>
+    <script>
+      var nombre = prompt("Introduce el nombre del alumno");
+      var nota1 = parseInt(prompt("Introduce la 1 nota"));
+      var nota2 = parseInt(prompt("Introduce la 2 nota"));
+      var nota3 = parseInt(prompt("Introduce la 3 nota"));
+
+      function Alumno(nombre, nota1, nota2, nota3) {
+        this.nombre = nombre;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+      }
+
+      function media() {
+        var x = (nota1 + nota2 + nota3) / 3;
+        var calculoMedia = x.toFixed(2);
+        return calculoMedia;
+      }
+      alu1 = new Alumno(nombre, nota1, nota2, nota3);
+
+      Alumno.prototype.med = media;
+
+      datos = alu1.med();
+      alert("La media del alumno : " + alu1.nombre + " es de " + datos);
+    </script>
+  </body>
+</html>

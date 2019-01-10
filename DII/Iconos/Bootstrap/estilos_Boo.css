@@ -1,0 +1,48 @@
+header {
+	background:#2c3e50;
+	color:#fff;
+}
+
+.main {
+	background:#f2f2f2;
+}
+h2{
+
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+.container{
+	background: #34495e;
+	color:glyphicon-print;
+}
+
+aside {
+	background:#c0392b;
+	color:#fff;
+}
+
+footer {
+	background:#16a085;
+	color:#fff;
+}
+
+.glyphicon-envelope{
+
+	color: #c0392b;
+	padding-left: 25px;
+
+
+}
+
+.glyphicon-print{
+
+	color:#c0392b;
+	padding-left: 53px;
+}
+.glyphicon-search{
+
+
+	color: #c0392b;
+	padding-left: 15px;
+}

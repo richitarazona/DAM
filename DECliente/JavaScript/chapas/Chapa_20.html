@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Strings_2</title>
+    <script>
+      /*   //expresiones regulares
+      var expresion_1 = /\d\d\d/g;
+      var cadena = "123-154-125-43";
+      var tariz = cadena.match(expresion_1);
+      alert(tariz); */
+
+      //validar correo
+      var expresion_2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/;
+      var correo = "ricardogmail.com";
+      if (expresion_2.test(correo)) {
+        alert("correo incorrecto");
+      } else {
+        alert("correo correcto");
+      }
+
+      var expresion_1 = /b/;
+      var cadena = "nASDbsdb";
+      var tariz = cadena.match(expresion_1);
+      var hallado = cadena.search(expresion_1);
+
+      var expresion_1 = /\d\d\d/g;
+      var sustituir = "XXXX";
+      var cadena = "125-12-158-22";
+      var resultado = cadena.replace(expresion_1, sustituir);
+      alert(resultado);
+    </script>
+  </head>
+  <body></body>
+</html>

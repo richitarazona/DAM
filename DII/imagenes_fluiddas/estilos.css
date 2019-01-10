@@ -1,0 +1,43 @@
+.div1.img1 {
+  background-color: yellowgreen;
+  max-width: 200px;
+}
+.div2.img1 {
+  background-color: yellowgreen;
+  max-width: 200px;
+}
+.div3.img1 {
+  background-color: yellowgreen;
+  max-width: 200px;
+}
+
+.div1.img2 {
+  background-color: yellowgreen;
+
+  max-width: 200px;
+}
+.div2.img2 {
+  background-color: yellowgreen;
+  max-width: 200px;
+}
+.div3.img2 {
+  background-color: yellowgreen;
+  max-width: 200px;
+}
+
+.div1.img2 img {
+  background-color: yellowgreen;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+.div2.img2 img {
+  background-color: yellowgreen;
+  width: 100%;
+  height: auto;
+}
+.div3.img2 img {
+  background-color: yellowgreen;
+  width: 100%;
+  height: auto;
+}

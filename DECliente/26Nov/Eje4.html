@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 4</title>
+    <script>
+        
+  
+      var alumno1 = ["Pedro", "4", "6", "6"];
+      var alumno2 = ["Juan", "4", "7", "3"];
+      var alumno3 = ["Maria", "4", "9", "6"];
+      var alumno4 = ["Richi", "4", "2", "6"];
+      var alumnos = ["alumno1", "alumno2", "alumno3", "alumno4"];
+
+      
+       
+    function añadir(){
+              var nombre = document.miform.nombre.value;
+              var n1 = prompt("Dame la primera nota");
+              var n2 = prompt("Dame la segunda nota");
+              var n3 = prompt("Dame la tercer nota");
+              alumnos[4] = [nombre,n1,n2,n3];
+             }
+
+
+    function buscar(){
+            alert("Hola");
+            for (i = 1; i < alumnos.length; i++) {
+          document.write(alumnos[i]) + "<br>";
+      }
+            var alu = document.miform.search.value;
+            for (var i = 0; i < alumnos.length; i++) {
+            for (let j = 0; j < alumnos[i].length; j++){
+              document.write(alumnos[i][j] + "<br>")
+           ;
+            
+              
+              
+            } }//for j
+           }  //for i 
+            
+   </script> 
+          
+  </head>
+  <body>
+    <center>
+      <h2>Notas</h2>
+      <label for="">Introduzca un nombre</label>
+      <form name="miform">
+        <input type="text" name="nombre" />
+
+        <input
+          type="button"
+          value="Añadir Alumno"
+          name="mostrar"
+          onclick="añadir()"/> 
+          <input type="text" name="search" />
+        <input
+          type="button"
+          value="Buscar Alumno"
+          onclick="buscar()"/>
+      </form>
+
+    </center>
+  </body>
+</html>

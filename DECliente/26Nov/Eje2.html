@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var datos = [];
+        function insertar(){
+            var dato = document.miform.valores.value;
+            document.getElementById("tipo").innerHTML=typeof(dato);
+            datos.push(dato);
+            
+
+        }
+
+        function mostrar(){
+            var cadenaString = "";
+            var cadenaBoolean = "";
+            var cadenaNumber = "";
+            var numero_booleanos = 0;
+            var numero_Strings = 0;
+            var numero_numbers = 0;
+            
+            for(i=0; i=datos.length; i++) {
+                var dato =datos[i]
+                if(typeof(dato) == "string"){
+                    numero_Srings++;
+                cadenaString += datos[i];
+                }
+                if(typeof(dato) == "boolean"){
+                numero_booleanos++;
+                cadenaBoolean += datos[i];
+                }
+                if(typeof(dato) == "number"){
+                    numero_nubers++;
+                cadenaNumber += datos[i];
+                }
+                
+                alert("El numero de Strings: " + numero_Srings);
+                alert(cadenaString);
+                alert("El numero de Bolleanos: " + numero_booleanos);
+                alert(cadenaBoolean)
+                alert("El numero de Numbers: " + numero_nubers);
+                alert(cadenaNumber)
+            }
+
+       
+    </script>
+</head>
+<body>
+    <center>
+        <h2>Tipos de Elementos</h2>
+        <form name="miform">
+            <h3>Inserte valores<br> Introducir 0 para mostrar resultado</h3>
+            <input type="text" name ="valores"><br>
+
+            <input type="button" name="valores" onclick="insertar()"><label for="">Insertar dato</label><br>
+            <input type="button" name="resul" onclick="mostrar()"><label>Mostar Tipos de datos</label><br>
+            <p id="tipo">Tipo de dato</p>
+            <p id="cadena"></p>
+        </form>
+    </center>
+</body>
+</html>

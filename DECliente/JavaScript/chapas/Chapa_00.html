@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C H A P A 00</title>
+
+    <script>
+        //Document.write escribe en la pagina
+        document.write("Estoy en el HEAD<br>");
+        function holahola() {
+            alert("Hola hola de html")
+
+        }
+    </script>
+</head>
+
+<body>
+    Soy el cuerpo <br>
+    <script>
+        document.write("Mensaje de alerta en el BODY<br>");
+    </script>
+    <!-- Esto se ejecuta sin el el navegador no esta permitido JavaScript -->
+    <noscript>
+        OHHHHH..no funciona Javascript
+    </noscript>
+    <!-- Tendremos los scripts en un hoja externa -->
+    <script src="coleguita.js"></script>
+
+
+    <button onclick="saludo()">
+        Saludo
+    </button>
+    <button onclick="holahola()">
+        Saludo hola hola
+    </button>
+
+</body>
+
+</html>

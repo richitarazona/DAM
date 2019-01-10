@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>Tablas accesibles</title>
+</head>
+<body>
+
+    <div id="container">
+    <fieldset class="fieldset">
+        <legend> Datos de registro</legend>
+                <label for="nombre">Introduce tu nombre:</label>
+                <input  class="autocomplete" autocomplete="name" id="nombre" type="text" size="35" /> <br>
+                
+                <label for="password">Introduce tu Password</label>
+                <input  class="autocomplete" value="John" name="assword" type="password" id="password" siz="10"><br>
+                <h5>Opcion con mensaje de error</h5>
+                <form>
+                        <label for="choose">¿Preferirías susto o muerte?</label>
+                        <input class="autocomplete" id="choose" name="i_like" pattern="susto|muerte">
+                        <button class="boton">Enviar</button>
+                 </form>
+
+                <legend>Selecciona tus gustos musicale:</legend>
+                <label for="clasica">Clasica</label>
+                <input type="checkbox" id="clasica" name="clasica"  />
+                <label for="rock">Rock </label>
+                <input type="checkbox" id="rock" name="rock" checked="checked" />
+                <label for="punk"> Punk</label>
+                <input type="checkbox" id="punk" name="rock" checked="checked" /><br><br>
+                <div id="icono">
+                <legend>Color</legend>
+                <label for="negro">Negro</label>
+                <input type="radio" name="color" id="negro" value="negro"/> <br> 
+                <label for="blanco">Blanco</label>
+                <input type="radio" name="color" id="blanco" value="blanco" checked="checked" /><br><br>
+            </div>
+            
+                <label  for="archivo">Selecciona un archivo:</label>
+                <input   type="file" name="imagen01" id="archivo" /></br><br>
+
+                <label for="telefono">Telefono de contacto</label><i class="fa fa-phone"></i>
+                <input class="autocomplete" value="666-" type="tel" id="telefono"><br>
+
+                <label for="url">Indique su direccion web</label>
+                <input class="autocomplete" type="url" id="url" value="http://"autocomplete=on id="url"><br>
+      
+                <form  action="" autocomplete="off"><i class="fa fa-envelope"></i>
+                E-mail  Valido<input  class="autocomplete" type="email" name="email" required="true"> <br/>
+                cantidad ( 1 a 5)
+                <input type="number" name="quantity" min="1" max="5" required="true">
+                URL valida<input  class="autocomplete" type="url" name="homepage" required="true"> <br/>
+                <input class="boton" type="submit">
+                </form>
+                
+                <label for="color">Elige un color</label><i class="fas fa-crosshairs"></i>
+                <input class="autocomplete" type=color name="color"  id="color" alt="Elija un color o escriba su número RGB" />
+
+                <label for="guitarras">Nº de guitarras: </label>
+                <input class="autocomplete" type=number name=anno min=1 max=20 id="guitarras"/></br><br>
+
+                <label for="precio">Presupuesto</label>
+                <input  class="autocomplete"type=range name=presupuesto min=100 max =5000 step=150 id="precio"/> </br><br>
+
+                <label for="guitarra">  Elige tu modelo favorito</label>
+                <select class="autocomplete" multiple autofocus name=guitarrafavorita id="guitarra" >
+                        <option value=verde label=Gibson> </option>
+                        <option value=rojo label=Fender> </option>
+                        <option value=amarillo>Gresch</option>
+                        <option value=azul disabled>Epiphone</option>
+                        <option value=verde label=Marshall> </option>
+                        <option value=rojo label=Squire> </option>
+                        <option value=amarillo>ASg</option>
+                        
+                </select><br><br>
+
+                        <label for="modelo">Marca de guitarra:</label>
+                        <select class="boton" name=modelos id="modelo">
+                        <optgroup label="Gibson">
+                            <option value="1.01" label=Lespaul >Les Paul</option>
+                            <option value="1.02" label=Sg ></option>
+                            <option value="1.03" label=Arrow ></option>
+                            <option value="1.04" label=Explorer ></option>
+                        </optgroup>
+                        <optgroup label="Fender" disabled>
+                            <option value="2.01" label=Stratocaster ></option>
+                            <option value="2.02" label=Domino ></option>
+                            <option value="2.03" label=Aquire></option>
+                        </optgroup>
+                        
+                        </select></br><br><br>
+
+                       <label for="boton">Boton cualquiera</label>
+                       <button name="Boton sin uso" id="boton" disabled="disabled"></button><br><br>
+
+
+                        
+
+                <label for="fecha">Indique una fecha: </label>
+                <input class="autocomplete" type=date name=fecha id="fecha" /></br><br><br><br>
+
+                
+
+                <label for="enviar"> Enviar informacion a la base de Datos</label>
+                <input class="borrar" type="submit" id="enviar" /></br><br><br><br>
+
+                <label for="borrar">Delete</label>
+                <input class="boton" type=reset value="Borrar datos" id="borrar" /></br><br><br>
+
+                <label for="observaciones">Observaciones: </label>
+                <textarea class="autocomplete" rows=5 cols=20 placeholder="Quejas">Indique sus quejas</textarea></br>
+
+
+                
+
+            
+      </fieldset>
+    </div>
+      
+</body>
+</html>

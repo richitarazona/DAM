@@ -1,0 +1,193 @@
+/* Estilos para los elementos HTML*/
+body {
+    margin-top: 0;
+    background-color: rgb(128, 141, 159);
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+}
+h1 {
+    font-size: 150%;
+    margin: 0;
+    padding: .5em 0 .25em;
+}
+h2 {
+    font-size: 120%;
+    margin: 0;
+    padding: .25em 0 .5em;
+}
+h1, h2  {
+    color: rgb(205, 163, 94);
+}
+h4 {
+    color: rgb(119, 75, 77);
+    padding: 2em;
+}
+
+ul {
+    margin: 0 0 1em 0;
+    padding: 10px 0 0 2.5em;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ 
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px dashed black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+}
+form {
+    margin: 0;
+}
+br {
+    clear: left;
+}
+
+/* estilos para las secciones div */
+#contenido {
+    width: 760px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid rgb(119, 75, 77);
+}
+#cabecera {
+    margin: 0;
+    border-bottom: 2px solid rgb(119, 75, 77);
+    padding: .5em 2em;
+}
+#cabecera h1 {
+    margin: 0;
+    padding: .5em;
+    color: black;
+}
+#principal {
+    margin: 0;
+    padding: .5em 2em;
+    min-height: 400px;
+
+}
+#derecha #producto {
+    border-bottom: 1px solid gray;
+    border-top: 1px dotted gray;
+}
+#producto img {
+    float:right;
+}
+#derecha #producto h5 {
+    padding: 0.2em;
+    color: firebrick;
+}
+#menu {
+    background-color: indianred;
+    width: 30%;
+    float: left;
+    min-height: 300px;
+   
+    
+}
+#derecha {
+    float:left;
+    margin-left: 20px;
+    width: 450px;
+}
+
+
+#menu a {
+   color: white;
+   text-decoration: none;
+}
+
+#menu a:hover {
+    color: rgb(128, 141, 159);
+}
+#menu ul {     
+    list-style-type: none;
+   
+}
+#menu ul li#inicio {
+    border-bottom: 1px solid midnightblue; 
+    width: 80%;
+}
+
+#menu ul li {
+    padding: 0.7em;  
+}
+
+#derecha img {
+     
+    padding: 10px;
+}
+ 
+#pie {
+    clear: both;
+    margin-top: 2em;
+    padding-right: 1em;
+    border-top: 2px solid rgb(119, 75, 77);
+}
+#pie p {
+    text-align: right;
+    font-size: 80%;
+    margin: 1em 0;
+}
+ 
+
+/********************************************************************
+* Estilos para el formulario
+********************************************************************/
+#form {
+    margin: .5em 0 2em;
+     
+}
+#form label {
+    width: 12em;
+    padding-right: 1em;
+    float: left;
+    text-align: right;
+}
+#form input {
+    float: left;
+    width: 15em;
+    border: 1px solid  rgb(119, 75, 77);
+    margin-bottom: 20px;
+    
+}
+#form input[type='text'] {
+    width: 15em;
+}
+#form input[type='radio'] {
+    width: 5em;
+    margin-left: 10em;
+}
+#form input[type='checkbox'] {
+    width: 2em;
+    margin-left: 10em;
+}
+
+#form p {
+     margin-left: 10em;
+     margin-bottom: 3px;
+     
+}
+
+#form input[type='submit'] {
+    width: 10em;
+    margin-top: .3em;
+}
+
+#form  select {
+    margin-left: 12em;
+    width: 12em;
+    margin-bottom: 20px;
+}
+#form  textarea{
+    float: left;
+    margin-bottom: 20px;
+}

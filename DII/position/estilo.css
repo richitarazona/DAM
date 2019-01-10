@@ -1,0 +1,9 @@
+.izq {
+  float: left;
+}
+.derecha {
+  float: right;
+}
+.clear_izq {
+  clear: left;
+}

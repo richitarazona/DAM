@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      function veropc() {
+        alert(miformulario.elements[2].value);
+      }
+
+      function vertodoss() {
+        for (i = 0; i < element.length; i++) {
+          alert(miformulario.elements[i].value);
+        }
+      }
+      function veropc3() {
+        for (i = 0; i < element.length; i++) {
+            if(miformulario.elements[i].)
+          alert(miformulario.elements[i].value);
+        }
+      }
+    </script>
+    <title>Checkbox</title>
+  </head>
+  <body>
+    <center>
+      <h2>CHECKBOX</h2>
+
+      <form name="niformulario">
+        <br /><br />
+        Selelciona las opciones: <br /><br />
+        //podriamos popnerle a el chekbox el mismo nombre
+        <input type="checkbox" name="che1" value="Uno" checked />Opcion1<br />
+        <input type="checkbox" name="che2" value="Dos" />Opcion2<br />
+        <input type="checkbox" name="che3" value="Tres" />Opcion3<br />
+        <input type="checkbox" name="che4" value="Cuatro" />Opcion4<br />
+        <hr />
+        <input
+          type="button"
+          name="boton"
+          value="Ver opciones"
+          onclick="veropc()"
+        />
+        <input
+          type="button"
+          name="boton"
+          value="Ver todas las opciones"
+          onclick="veropc2()"
+        />
+      </form>
+    </center>
+  </body>
+</html>

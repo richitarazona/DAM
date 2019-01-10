@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ARRAYS</title>
+
+    <script>
+      //formas de declarar arrays
+      //FORMA1
+      var usuarios = new Array(4);
+      usuarios[0] = "Juan";
+      usuarios[1] = "Javi";
+      usuarios[2] = "Alberto";
+      usuarios[3] = "Pepe";
+
+      //FORMA 2 CONSTANTES
+      var usuarios2 = new Array("Juan", "Alberto", "Pepe");
+      //FORMA 3
+
+      var usuarios3 = ["Juan", "Alberto", "Pepe"];
+
+      for (i = 1; i < usuarios.length; i++) {
+        document.write(usuarios[i].toUpperCase() + "<br>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
