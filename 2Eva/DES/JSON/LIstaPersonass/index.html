@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="personas.js"></script>
+    <title>Document</title>
+  </head>
+
+
+  <body onload="carga()">
+    <center>
+    <h2>Listado personas</h2>
+    <form action="" name="miform">
+      <select name="personas" id="personas" onchange="ver()">
+        <label for="">Seleccione un nombre</label>
+        <option value="" disabled selected>Seleccione un opcion</option>
+      </select>
+     <!--  <select name="pasatiempos" id="pasatiempos">
+       
+      </select> -->
+     
+    </form>
+    <br><br>
+    <div id="contenedor"></div>
+    <script>
+      //añadimos a las options todas las personas de la lista
+      function carga() {
+        for (var i = 0; i < people.personas.length; i++) {
+          document
+            .getElementById("personas")
+            .options.add(new Option(people.personas[i].nombre));}
+        }
+      
+
+      function ver() {
+        //seleccionamos su posicione en la lista.El menos 1 no
+        var a = (miform.personas.selectedIndex)-1;
+        var aficiones = "";
+        var resultado = "";
+        var estado = "";
+        var direccion = "";
+        //añadimos al array todas los pasatiempos
+        for (i = 1; i < people.personas[a].pasatiempos.length; i++) {
+          aficiones += people.personas[a].pasatiempos[i] + "<br>";}
+
+        
+          if(people.personas[1].soltero){
+            estado = "soltero";
+          }else{
+            estado = "casado"
+          }
+
+          //Obtenemos la infoprmacion
+        resultado += "<strong>" + people.personas[a].nombre + "</strong>";
+        resultado += " tiene " + people.personas[a].edad + " años de edad" + "<br>";
+        resultado += "Una altura de " + people.personas[a].altura + " mts" + "<br>";
+        resultado += "y un peso de "  + people.personas[a].peso + " kgs" + "<br>";
+        resultado += "y sus aficiones son:  "  + "<br>" + aficiones + "<br>";
+        resultado += "Actualmente se encuentra  "  + estado + "<br>";
+        resultado += "Su direccion es : Calle  "  + people.personas[1].direccion.calle + "<br>";
+        resultado += "Numero "  + people.personas[1].direccion.numero + "<br>";
+        resultado += "Pais: "   + people.personas[1].direccion.pais + "<br>";
+
+        
+        document.getElementById("contenedor").innerHTML = resultado;
+        
+      }
+     
+    </script>
+  </center>
+  </body>
+</html>

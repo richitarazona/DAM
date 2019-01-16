@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Cursos = {
+        DAW: [
+          { nombre: "Daniel", DWEC: 10, DIIW: 9, EIDW: 4 },
+          { nombre: "Dora", DWEC: 4, DIIW: 8, EIDW: 7 },
+          { nombre: "Dionisio", DWEC: 7, DIIW: 9, EIDW: 6 }
+        ],
+
+        ASIR: [
+          { nombre: " Alberto", FUHA: 5, LGMI: 3 },
+          { nombre: " Angela", FUHA: 5, LGMI: 2 },
+          { nombre: " ALba", FUHA: 7, LGMI: 8 }
+        ],
+
+        media: function(a, b, c) {
+          return (a + b + c) / 3;
+        }
+      };
+      var media = 0;
+      for (let i = 0; i < 3; i++) {
+        var media;
+      }
+
+      document.write(
+        `Numero de alumnos de ASIR : ${Object(Cursos["ASIR"]).length}<br>`
+      );
+
+      document.write(
+        `Numero de propiedades de cada alumno de ASIR : ${
+          Object.keys(Cursos["ASIR"][0]).length
+        }<br>`
+      );
+
+      for (let i = 0; i < Cursos["ASIR"].length; i++) {
+        for (let j = 0; j < Cursos["ASIR"].length; j++) {
+          alert(`Nota de Angela: ${Object.values(Cursos["ASIR"][i])[j]}<br>`);
+        }
+      }
+    </script>
+  </body>
+</html>

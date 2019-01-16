@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="peliculas.js"></script>
+    <title>Farmacias</title>
+  </head>
+  <body onload="carga()">
+    <center>
+        <h2>VideoClub</h2>
+    <form action="" name="miform">
+      <select name="peliculas" id="peliculas">
+        <option selected disabled >Seleccion una Peli</option>
+      </select>
+    </form>
+    <br><br>
+    <div id="contenedor"></div>
+
+    <script>
+      /*  console.log(datos.pelis[1].ID);
+      var long = datos.pelis[1].ID;
+      var resultado = [];
+      for (var i = 0; i < datos.pelis.length; i++) {
+        resultado += datos.pelis[i].titulo + "<br>";
+      } */
+      //document.write(resultado);
+      /* var select = document.getElementById("peliculas");
+      function cargarPeliculas() {
+        alert(miform.peliculas.length);
+        for (var i = 0; i < datos.pelis.length; i++) {
+          var option = document.createElement("option");
+          option.text = datos.pelis[i].titulo;
+          select.add(option);
+        }
+      }*/
+      function carga() {
+        for (var i = 0; i < datos.pelis.length; i++) {
+          document
+            .getElementById("peliculas")
+            .options.add(new Option(datos.pelis[i].titulo));
+        }
+      }
+
+      
+      document
+        .getElementById("peliculas")
+        .addEventListener("change", function() {
+          var resultado = "";
+          var pelicula = miform.peliculas.value;
+          for (let i = 0; i < datos.pelis.length; i++) {
+            if (datos.pelis[i].titulo == pelicula) {
+              resultado += "Titulo: " + "<strong>" + datos.pelis[i].titulo  + "</strong>" + "<br>";
+              resultado += "Estreno: " + "<strong>" + datos.pelis[i].estreno + "</strong>" +"<br>";
+              resultado += "Poster: " + "<strong>" + datos.pelis[i].poster + "</strong>" +"<br>";
+
+              document.getElementById("contenedor").innerHTML =
+                resultado;
+            }
+          }
+        });
+
+        
+    </script>
+
+  </center>
+
+  </body>
+</html>

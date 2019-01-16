@@ -7,6 +7,24 @@
     <title>Document</title>
   </head>
   <body>
+    <center>
+      <h2>Notas Medias</h2>
+    <form name="miform">
+      <label for="">Asir</label>
+      <input type="checkbox" name="asir" id="asir">
+      <label for="">Daw</label>
+    <input type="checkbox" name="daw" id="daw"><br><br>
+    <button id="btAsir" >Mostar Notas Asir</button>
+    <button id="btdaw" >Mostar Notas Daw</button>
+    <hr>
+    <div id="contenedor1"></div>
+    <div id="contenedor2"></div>
+
+    </form>
+
+  </center>
+
+
     <script>
       var Cursos = {
         DAW: [
@@ -19,14 +37,50 @@
           { nombre: " Alberto", FUHA: 5, LGMI: 3 },
           { nombre: " Angela", FUHA: 5, LGMI: 2 },
           { nombre: " ALba", FUHA: 7, LGMI: 8 }
-        ],
-
-        media: function(a, b, c) {
-          return (a + b + c) / 3;
+        ],}
+           var nota = 0;
+           var media = 0;
+           var resultado = "";
+       
+          var botonAsir = document.getElementById("btAsir");
+          botonAsir.addEventListener("click",function(){
+            for (let j = 0; j < Cursos.ASIR.length; j++) {
+            var nota1 = parseInt(Cursos.ASIR[j].FUHA);
+            var nota2 = parseInt(Cursos.ASIR[j].LGMI);
+            resultado += "El alumno" + Cursos.ASIR[j].nombre + " ha obtenido unas notas de :" + nota1 + "-" + nota2 + "<br>";
+            media = (nota1 + nota2)/((Cursos.ASIR.length)-1)
+            resultado += "Su media es de: " + media + "<br>";
+            
         }
-      };
+        document.getElementById("contenedor1").innerHTML = resultado;
+        
+      })
 
-      alert(Cursos.DAW[1].DWEC);
+     
+          
+      var botonDaw = document.getElementById("btdaw");
+          botonDaw.addEventListener("click",function(){
+           for (let j = 1; j < Cursos.DAW.length; j++) {
+            var nota1 = parseInt(Cursos.DAW[j].DWEC);
+            var nota2 = parseInt(Cursos.DAW[j].DIIW);
+            var nota3 = parseInt(Cursos.DAW[j].EIDW);
+
+            resultado += "El alumno " + Cursos.DAW[j].nombre + " ha obtenido unas notas de :" + nota1 + "-" + nota2 + "<br>";
+            media = (nota1 + nota2)/((Cursos.DAW.length)-1)
+            resultado += "Su media es de: " + media + "<br>";
+            
+          }
+          
+          document.getElementById("contenedor2").innerHTML = resultado;
+        })
+       
+            
+      
+        
+
+        
+
+        
     </script>
   </body>
 </html>

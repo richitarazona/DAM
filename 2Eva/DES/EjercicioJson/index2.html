@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="colores.js"></script>
+    <title>Document</title>
+</head>
+<body onload="carga()">
+    <form action="" name="miformulario">
+    <select name="colores" id="colores">
+    </select>
+    <select name="colores2" id="colores2"></select>
+        
+    <div id="contenedor"></div>
+</form>
+
+    <script>
+        function carga() {
+
+        for (i = 0; i < colores.arrayColores.length; i++) { //miformulario.colores.options.....Otra opcion
+            document.getElementById("colores").options.add(new Option(colores.arrayColores[i].nombreColor));
+
+            miformulario.colores2.options.add(new Option(colores.arrayColores2[i].valorHexadec))
+        }
+}
+
+
+        document.getElementById('colores').addEventListener('change', function(){
+            var color = miformulario.colores.value;
+            for (let i = 0; i < colores.arrayColores.length; i++) {
+                if (colores.arrayColores[i].nombreColor == color) {
+                    document.getElementById('contenedor').innerHTML = colores.arrayColores[i].nombreColor + '\n' + colores.arrayColores[i].valorHexadec;
+                }
+                
+            }
+        })   
+        for (const x in colores) {
+             for (let i = 0; i < x.length; i++) {
+                 
+                console.log(x);
+                
+             }
+        }
+
+    </script>
+</body>
+</html>
