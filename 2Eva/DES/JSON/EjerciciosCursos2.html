@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Objetos 02</title>
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Listado por grupo</h1>
+    <form name="formulario">
+      <input type="radio" name="curso" value="DAW" id="DAW" checked />
+      <label for="DAW">DAW</label>
+      <input type="radio" name="curso" value="ASIR" id="ASIR" />
+      <label for="ASIR">ASIR</label>
+      <input type="radio" name="curso" value="Todos" id="Todos" />
+      <label for="Todos">Todos</label>
+    </form>
+    <br />
+    <button onclick="verListado();">Ver Listado</button> <br />
+    <div id="resultado"></div>
+
+    <script>
+      // Objeto Cursos
+      var Cursos = {
+        DAW: [
+          { nombre: "Daniel", DWEC: 10, DIIW: 9, EIDW: 4 },
+          { nombre: "Dora", DWEC: 4, DIIW: 8, EIDW: 7 },
+          { nombre: "Dionisio", DWEC: 7, DIIW: 9, EIDW: 6 },
+          { nombre: "Paco", DWEC: 3, DIIW: 8, EIDW: 7 }
+        ],
+        ASIR: [
+          { nombre: "Alberto", FUHA: 5, LMGI: 3 },
+          { nombre: "Ángela", FUHA: 5, LMGI: 2 },
+          { nombre: "Alba", FUHA: 7, LMGI: 8 }
+        ],
+        media: notas => eval(notas.join(" + ")) / notas.length
+      };
+
+      // Funcion verListado, que se llama al hacer click en el botón
+      function verListado() {
+        document.getElementById("resultado").innerHTML = ""; // Limpio el div #resultado
+        let curso = cursoSeleccionado(); // Obtengo el curso seleccionado
+        console.log("Curso: ", curso); // Lo imprimo en la consola
+
+        // Llamo a dibujar el curso/s que corresponda.
+        if (curso == "Todos") {
+          dibujarTabla("DAW");
+          dibujarTabla("ASIR");
+        } else {
+          dibujarTabla(curso);
+        }
+      }
+
+      // Funcion para obtener el curso selccioando
+      function cursoSeleccionado() {
+        if (document.getElementById("DAW").checked) return "DAW";
+        if (document.getElementById("ASIR").checked) return "ASIR";
+        return "Todos";
+      }
+
+      // Funcion para dibujar la tabla HTML de un curso
+      function dibujarTabla(curso) {
+        // En la variable salida, se almacenara todo el HTML
+        let salida = `<h2>${curso}</h2>`;
+        salida += `<table>
+                        <tr>`;
+        curso = eval(`Cursos.${curso}`); // Obtener el array de alumnos
+        console.log("Array del Curso:", curso); // Lo imprimo en consola
+
+        // Crear el encabezado de la tabla
+        for (atributo in curso[0]) {
+          salida += `     <th>${atributo.toUpperCase()}</th>`;
+        }
+        salida += `       <th>MEDIA</th>`;
+        salida += `     </tr>`;
+        // Crear la filas del cuerpo de la tabla
+        for (let i = 0; i < curso.length; i++) {
+          salida += `     <tr>`;
+          let notas = []; // Array para almacenar las notas de cada alumno y luego pedir la media
+          for (atributo in curso[i]) {
+            salida += `       <td>${curso[i][atributo]}</td>`;
+            if (atributo != "nombre") notas.push(curso[i][atributo]);
+          }
+          // Imprimir la notas y la media en consola
+          console.log(
+            `Notas: ${notas} - Media: ${Cursos.media(notas).toFixed(2)}`
+          );
+          salida += `       <td>${Cursos.media(notas).toFixed(2)}</td>`;
+          salida += `     </tr>`;
+        }
+
+        salida += `   </table>`;
+        document.getElementById("resultado").innerHTML += salida;
+      }
+    </script>
+  </body>
+</html>
