@@ -10,10 +10,36 @@
   <body>
     <center>
       <h2>Festivales</h2>
+      <div id="contenedor"></div>
       <script>
         var festival = festivales.Festival;
         var ciudad = festivales.Ciudad;
         var anno = festivales.Anno;
+        var discos = "";
+        var resultado = "";
+        
+        for (let i = 0; i < festivales.Grupos.length; i++) {
+         
+          for (let k = 0; k < festivales.Grupos[i].discos.length; k++) {
+            var nombre =  festivales.Grupos[i].nombre;
+            var compania = festivales.Grupos[i].compañia;
+            discos += festivales.Grupos[i].discos[k] + "<br>";
+              
+            }
+          resultado += "Festival: " + festival + "<br>";
+          resultado += "Ciudad: " + ciudad + "<br>";
+          resultado += "Año: " + anno + "<br>";
+          resultado +=  nombre + "<br>";
+          resultado +=  "Compañia: " + compania + "<br>";
+          resultado +=  "DISCOGRAFIA" + "<br>" + discos + "<br>";
+          document.getElementById("contenedor").innerHTML = resultado;
+          
+          }
+          
+          
+          
+
+        
       </script>
     </center>
   </body>

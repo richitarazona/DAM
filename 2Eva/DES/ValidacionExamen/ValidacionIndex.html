@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <title>Moviles</title>
+</head>
+<body>
+    <center>
+        <h2>MOVILIZATE</h2>
+        <form name="miform"></form>
+        <select name="moviles" id="moviles" size ="6">
+            <option value="" disabled selected>Seleccione movil</option>
+            <option value="HUAWEI">HUAWEI</option>
+            <option value="BQ">BQ</option>
+            <option value="LG">LG</option>
+            <option value="SAMSUNG">SAMSUNG</option>
+            <option value="IPHONE">IPHONE</option>
+        </select>
+        <select name="pulgadas" id="pulgadas">
+        <option value="" disabled selected>Seleccione pulgadas</option>
+        <option value="4.9">4.9</option>
+        <option value="5.1">5.1</option>
+        <option value="5.2">5.2</option>
+        <option value="5.5">5.5</option>
+    </select>
+    <br><br>
+    <div id="tarifas">
+    <label >Tarifa:</label>
+    <input type="radio"  value="Particular" name="tarifa"  id="">Particular
+    <input type="radio"  value="Autonomo" name="tarifa" id="">Autonomo
+    <input type="radio"  value="Empresa" name="tarifa" id="">Empresa
+    </div>
+    <br><br>
+    <div id="operadores">
+    <label >Operador:</label>
+    <input type="radio"  value="Jazztel" name="tarifa"  id="">Jazztel
+    <input type="radio"  value="Lowy" name="tarifa" id="">Lowy
+    <input type="radio"  value="Orange" name="tarifa" id="">Orange
+    </div>
+    <br><br>
+    <label >Accesorios:</label>
+    <label >Auriculares</label>
+    <input type="checkbox" name="accesorios" value = "Auriculares">
+    <label >Funda</label>
+    <input type="checkbox" name="accesorios" value = "Funda">
+    <label >Protector</label>
+    <input type="checkbox" name="accesorios" value = "Protector">
+    <label >Bateria</label>
+    <input type="checkbox" name="accesorios" value = "Bateria">
+    <br><br>
+    <label >Seleccione plazo de entrega</label>
+    <select name="entrega" id="entrega">
+        <option value="2">2 dias</option>
+        <option value="15">15 dias</option>
+        <option value="30">1 mes</option>
+    </select>
+    <br><br>
+    <label >Email</label>
+    <input type="email" name="email" id="email" size="30">
+    <br><br>
+    <input type="button" value="comprar" onclick="accion()">
+    </center>
+    
+</body>
+</html>
