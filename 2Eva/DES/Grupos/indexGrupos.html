@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="estilos2.css" />
     <script src="festival.js"></script>
     <title>Festivales</title>
   </head>
@@ -17,29 +18,27 @@
         var anno = festivales.Anno;
         var discos = "";
         var resultado = "";
-        
+
+        resultado += "Festival: " + festival + "<br>";
+        resultado += "Ciudad: " + ciudad + "<br>";
+        resultado += "Año: " + anno + "<br>";
+
         for (let i = 0; i < festivales.Grupos.length; i++) {
-         
+          discos = "";
           for (let k = 0; k < festivales.Grupos[i].discos.length; k++) {
-            var nombre =  festivales.Grupos[i].nombre;
+            var nombre = festivales.Grupos[i].nombre;
             var compania = festivales.Grupos[i].compañia;
             discos += festivales.Grupos[i].discos[k] + "<br>";
-              
-            }
-          resultado += "Festival: " + festival + "<br>";
-          resultado += "Ciudad: " + ciudad + "<br>";
-          resultado += "Año: " + anno + "<br>";
-          resultado +=  nombre + "<br>";
-          resultado +=  "Compañia: " + compania + "<br>";
-          resultado +=  "DISCOGRAFIA" + "<br>" + discos + "<br>";
-          document.getElementById("contenedor").innerHTML = resultado;
-          
           }
-          
-          
-          
 
-        
+          resultado += "<article>";
+          
+          resultado += nombre + "<br>";
+          resultado += "Compañia: " + compania + "<br>";
+          resultado += "DISCOGRAFIA" + "<br>" + discos + "<br>";
+          resultado += "</article>";
+          document.getElementById("contenedor").innerHTML = resultado;
+        }
       </script>
     </center>
   </body>
