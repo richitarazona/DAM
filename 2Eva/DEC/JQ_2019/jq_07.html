@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_07</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("#boton1").click(function() {
+          $("#tabla1").attr("border", 8);
+        });
+
+        $("#boton2").click(function() {
+          alert($("#tabla1").attr("border"));
+        });
+
+        $("#boton3").click(function() {
+          var x = $("#tabla1");
+          x.removeAttr("border");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Añadir la propiedad border" id="boton1" />
+    <br />
+    <input
+      type="button"
+      value="Recuperar el valor de la propiedad border"
+      id="boton2"
+    />
+    <br />
+    <input type="button" value="Eliminar propiedad borde" id="boton3" /> <br />
+
+    <table id="tabla1">
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+    </table>
+
+    <hr />
+  </body>
+</html>

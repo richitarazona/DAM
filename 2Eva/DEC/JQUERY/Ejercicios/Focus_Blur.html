@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <!-- <script>
+      $(function() {
+        $("#container").dblclick(function() {
+          $(this).hide();
+        });
+        $("input:text").focus(function() {
+          $(this).css("color", "red");
+        });
+        $("input:text").blur(function() {
+          $(this).css("color", "blue");
+        });
+      });
+    </script> -->
+    <!-- //Segunda manera de hacerlo con funciones -->
+    <script>
+      $(function() {
+        $("#text3").focus(tomarFoco);
+        $("#text3").blur(pierdeFoco);
+        $("#text4").focus(tomarFoco);
+        $("#text4").blur(pierdeFoco);
+      });
+      function tomarFoco() {
+        $(this).css("color", "red");
+      }
+      function pierdeFoco() {
+        $(this).css("color", "blue");
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2></h2>
+    <div id="container" style="background-color :blueviolet">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias facilis
+      vitae magni voluptatum natus quaerat libero ducimus iusto rerum, nobis
+      minima id nulla delectus similique, saepe facere quo laboriosam corrupti!
+    </div>
+    <input type="text" name="" id="text1" value="Blur" /><br />
+    <input type="text" name="" id="text2" value="Focus" /><br />
+    <input type="text" name="" id="text3" value="Blur" /><br />
+    <input type="text" name="" id="text4" value="Focus" /><br />
+  </body>
+</html>

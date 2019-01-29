@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function() {
+        $("#titulo1").click(function() {
+          var x;
+          x = $("#titulo1");
+          x.css("color", "#ff0000");
+          x.css("background", "#ff00ff");
+          x.css("font-family", "Courier");
+        });
+        $("#titulo2").click(function() {
+          var x;
+          x = $("#titulo2");
+          x.css({ color: "green", background: "red", "font-size": "2.3em" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="titulo1">Titulo 111</h1>
+    <h1 id="titulo2">Titulo 222</h1>
+    <h1 id="titulo3">Titulo 333</h1>
+  </body>
+</html>

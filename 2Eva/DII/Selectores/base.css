@@ -1,0 +1,30 @@
+main,
+nav,
+header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* COLORES */
+
+header {
+  background-color: gray;
+  border: 2px solid black;
+}
+
+article,
+.article {
+  background-color: gainsboro;
+  border: 2 px solid crimson;
+  color: white;
+}
+
+code,
+.code,
+pre {
+  background-color: grey;
+}

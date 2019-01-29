@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h2>Usuarios Marzo</h2>
+      <form name="miform">
+        <label>Usuario</label> <input type="text" id="nombre" size="20" /><br /><br />
+        <label>Password</label
+        ><input type="password" name="passwd" id="passwd" /><br /><br />
+        <label>Repetir Password</label
+        ><input type="password" name="rptpasswd" id="rptpasswd" /><br />
+        <label>Edad</label> <input type="text" size="5" id = "edad"/><br />
+        <label>Coche</label>
+        <input type="radio"  name="vehiculo" value="si" />Si</label>
+        <input type="radio" name="vehiculo" value="no" />no</label>
+        <label >Matricula</label>
+        <input type="text" name= "matricula" id="matricula"><br><br>
+         <label >Aficiones:</label>
+         <input type="checkbox" name="aficiones" value="musica">Musica</label>
+         <input type="checkbox" name="aficiones" value="deporte">Deporte</label>
+         <input type="checkbox" name="aficiones" value="ordenador">Ordenador</label>
+         <input type="checkbox" name="aficiones" value="lectura">Lectura</label>
+         <input type="checkbox" name="aficiones" value="cine">Cine</label>
+         <input type="checkbox" name="aficiones" value="ir de fiesta">ir de fiesta</label><br><br>
+        <select name="bancos" id="bancos"><br><br>
+            <option value="" disabled selected >Seleccione Banco</option>
+            <option value="bbva">BBVA</option>
+            <option value="caixa">CaixaBanc</option>
+            <option value="ing">ING</option>
+            <option value="banesto">Banesto</option>
+
+        </select>
+        <br><br>
+         <input type="button" value="Nuevo usuario" id ="usuario" onclick="run()">
+         <input type="reset"><br><br>
+         <label >Usuarios Registrados</label>
+         <select name="usuariosRegistrados" id="usuariosRegistrados">
+         </select><br><br>
+         <textarea rows="8" cols="50" id="cajaTexto"></textarea>
+
+
+
+
+
+      </form>
+    </center>
+  </body>
+</html>

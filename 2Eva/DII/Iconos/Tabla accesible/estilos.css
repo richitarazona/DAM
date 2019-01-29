@@ -1,0 +1,44 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+font-family: 'Raleway', sans-serif;
+
+.container{
+
+    padding: right 20px ;
+    padding-left: 40px;
+}
+
+.fieldset{
+
+    padding-left: 40px;
+}
+
+body{
+    background: #D6DBBD;
+    color: #364459;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+.autocomplete{
+ background: #A6C9C4;
+
+
+}
+.boton{
+
+    background:#84A7B2;
+}
+.i{
+
+    width:25px;
+    color:#364459;
+    position: absolute;
+    left: 47px;
+    margin-top:18px;
+    padding-left: 13px;
+}
+
+label{
+
+    position: relative;
+    
+}

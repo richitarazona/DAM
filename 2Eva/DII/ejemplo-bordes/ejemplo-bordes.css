@@ -1,0 +1,36 @@
+div {
+  background-color: green;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+  color: white;
+  padding: 2rem 0 2rem .1rem;
+  font-size: .5rem;
+  float: left;
+  box-sizing: border-box;
+}
+div:nth-of-type(1) {
+  /*el mismo radio para los cuatro puntos*/
+  border-radius: 2rem;
+}
+div:nth-of-type(2) {
+  /*Esquinas1y3 Esquinas2y4*/
+  border-radius: 2rem 1rem;
+}
+div:nth-of-type(3) {
+  /*coordenadas-horizontales-3em / coordenadas-verticales-1em*/
+  border-radius: 3rem / 1rem;
+}
+div:nth-of-type(4) {
+  /*esquinas 1y3: horizontal vertical / esquinas2y4*/
+  border-radius: 3rem 1rem / 1rem;
+}
+div:nth-of-type(5) {
+  /*horizontal1 hor2 hor3 hor4 /vertical1 vert2 vert3 vert4*/
+  border-radius: 3rem 3rem 4rem 3rem / 1rem 1rem 2rem 1rem;
+}
+div:nth-of-type(6) {
+  /*Esquinas1y3 Esquinas2y4*/
+  border-radius: 100% 0;
+  border-left: 3rem dotted pink;
+}

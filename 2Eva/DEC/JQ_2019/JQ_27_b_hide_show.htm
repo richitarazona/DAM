@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+<title>JQ_27_2019</title>
+<link rel="StyleSheet" href="28_estilos.css" type="text/css">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script>
+$(function()
+{
+	$("#descripcion1").click(ocultarRecuadro);
+}
+)
+	function ocultarRecuadro()
+	{
+		$("#descripcion1").hide("slow",mostrarRecuadro);
+	}
+
+	function mostrarRecuadro()
+	{
+		$("#descripcion2").show("slow");
+	}
+	
+	
+</script>
+</head>
+<body>
+
+<div id="descripcion1" class="recuadro">
+<p>HTML es el lenguaje que se emplea para el desarrollo de páginas 
+de internet.</p> 
+<p>En la provincia de Huelva</p>
+<p>había un molinero horrado</p>
+<p>que ganaba su sustento</p>
+<p>y era casado con un moza</p>
+<p>que era una rosa y era tan bella que el corrigidor madre se prendo de ella</p>
+</div>
+<div id="descripcion2" class="recuadro">
+<p>AAAAAAAAAAAAAAAAAAA</p>
+<p>AAAAAAAAAAAAAAAAAAAAAAAo</p>
+<p>XCVVVVVVVVVVVVVV</p>
+<p>CXVVVVVVVVVVVVVVVVa</p>
+<p>CXVVVVVVVVVVVVVVVVVVVVVVVla</p>
+</div>
+</body>
+</html> 

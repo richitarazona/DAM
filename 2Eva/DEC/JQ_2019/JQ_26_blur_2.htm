@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+<title>JQ_26_2019</title>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(function() 
+	{
+		$("#text1").focus(tomaFoco);
+		$("#text1").blur(pierdeFoco);
+
+		$("#text2").focus(tomaFoco);
+		$("#text2").blur(pierdeFoco);
+	}
+	)		
+
+	function tomaFoco()
+	{
+		$(this).css("color","#f00");
+	}
+
+	function pierdeFoco()
+	{
+		$(this).css("color","#00f");
+	}
+</script>
+</head>
+<body>
+<form action="#" method="post">
+<input type="text" name="text1" id="text1" value="Hola" 
+size="20">
+<br>
+<input type="text" name="text2" id="text2" value="Hola" 
+size="20">
+</form>
+</body>
+</html>

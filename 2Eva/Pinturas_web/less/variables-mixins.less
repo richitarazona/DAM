@@ -1,0 +1,74 @@
+@colorFondo: gray;
+@colorfooter : green;
+@colorFondo2: rgb(243, 62, 62);
+
+@colormenu : rgb(225, 168, 64);
+@colortexto : white;
+@colorTexto2: rgb(14, 127, 182);
+@colorsecundario1 : #CECF20;
+@colorSecundario2: #ac0040;
+@colorFondo2: #bfbfbf;
+
+//FUENTES
+.font(@fontFamily: Arial, sans-serif; @fontWeight: normal; @fontStyle: normal) {
+  font-family: @fontFamily;
+  font-style: @fontStyle;
+  font-weight: @fontWeight;
+}
+
+.semibold {
+  .font("Open Sans", sans-serif; 600; normal);
+}
+
+.light {
+  .font("Open Sans", sans-serif; 300; normal);
+}
+
+.font2(@fontFamily; @fontSize; @fontStyle) {
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  font-style: @fontStyle;
+}
+
+//TEMAS
+.tema(@colorFondo;@colorTexto;@colorSecundario1) {
+  background-color: @colorFondo;
+  color: @colorTexto;
+  border-color: @colorSecundario1;
+}
+
+//TAMAÑOS
+.ancho (@ancho) {
+  width: @ancho;
+}
+
+.alinearTexto (@alinear) {
+  text-align: @alinear;
+}
+
+.alto (@alto) {
+  height: @alto;
+}
+
+.anchomaximo (@anchomaximo) {
+  max-width: @anchomaximo;
+}
+
+.flotar(@flota) {
+  float: @flota;
+}
+
+.posicion(@posicion) {
+  position: @posicion;
+}
+
+.margen(@margen) {
+  margin: @margen;
+}
+
+.padding(@padding) {
+  padding: @padding;
+}
+.display(@display) {
+  display: @display;
+}

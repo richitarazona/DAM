@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_08</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("#boton1").click(function() {
+          $("a")
+            .attr("href", "http://www.marca.com")
+            .text("MARCA");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="hIPERVINVULO AL MARCA" id="boton1" /> <br />
+    <input
+      type="button"
+      value="Recuperar el valor de la propiedad border"
+      id="boton2"
+    />
+    <br />
+    <input type="button" value="Eliminar propiedad borde" id="boton3" /> <br />
+
+    <a href="">bUSCADOR</a>
+
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,146 @@
+/* Estilos para los elementos HTML*/
+body {
+    margin-top: 0;
+    background-color: rgb(128, 141, 159);
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+}
+h1 {
+    font-size: 150%;
+    margin: 0;
+    padding: .5em 0 .25em;
+}
+h2 {
+    font-size: 120%;
+    margin: 0;
+    padding: .25em 0 .5em;
+}
+h1, h2  {
+    color: rgb(205, 163, 94);
+}
+h4 {
+    color: rgb(119, 75, 77);
+    padding: 2em;
+}
+
+ul {
+    margin: 0 0 1em 0;
+    padding: 10px 0 0 2.5em;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ 
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px dashed black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+}
+form {
+    margin: 0;
+}
+br {
+    clear: left;
+}
+
+/* estilos para las secciones div */
+#contenido {
+    width: 760px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid rgb(119, 75, 77);
+}
+#cabecera {
+    margin: 0;
+    border-bottom: 2px solid rgb(119, 75, 77);
+    padding: .5em 2em;
+}
+#cabecera h1 {
+    margin: 0;
+    padding: .5em;
+    color: black;
+}
+#principal {
+    margin: 0;
+    padding: .5em 2em;
+    min-height: 400px;
+
+}
+
+ 
+
+#principal {
+    float: left;
+    width: 500px;
+    padding-bottom: 1.5em;
+}
+
+#menu {
+    background-color: rgb(119, 75, 77);
+
+    padding: .2em 2em;
+}
+
+#menu a {
+    color: white;
+        text-decoration: none;
+}
+
+#menu a:hover {
+    color: rgb(128, 141, 159);
+}
+#menu ul {     
+    list-style-type: none;
+}
+
+#menu ul li {
+    display: inline;
+    padding-right: 1em;
+}
+ 
+#pie {
+    clear: both;
+    margin-top: 1em;
+    padding-right: 1em;
+    border-top: 2px solid rgb(119, 75, 77);
+}
+#pie p {
+    text-align: right;
+    font-size: 80%;
+    margin: 1em 0;
+}
+ 
+
+/********************************************************************
+* Estilos para el formulario
+********************************************************************/
+#form {
+    margin: .5em 0 2em;
+}
+#form label {
+    width: 6em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    float: left;
+}
+#form input {
+    float: left;
+    width: 15em;
+    border: 1px solid  rgb(119, 75, 77);
+}
+#form input[text] {
+    width: 25em;
+}
+
+#form  select {
+     float: left;
+    width: 15em;
+}

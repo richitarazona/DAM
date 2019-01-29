@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("a").mouseover(function() {
+          $(this).css("background-color", "#ff0");
+        });
+        $("a").mouseout(function() {
+          $(this).css("background-color", "#fff");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, maxime
+      tempore! Alias officiis amet ullam quia commodi, harum a fuga officia esse
+      corrupti ab quam deleniti atque quo distinctio voluptatum!
+    </p>
+    <a href="http://google.com">Google</a>
+  </body>
+</html>

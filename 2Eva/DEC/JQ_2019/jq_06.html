@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_06</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("#boton1").click(function() {
+          alert($("#parrafo1").text());
+        });
+        $("#boton2").click(function() {
+          $("#parrafo1").text("Patata alavesa");
+        });
+        $("#boton3").click(function() {
+          $("td").text("P A T A T A");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Obtener el texto de un párrafo" id="boton1" />
+    <br />
+    <input type="button" value="Modificar el texto de un párrafo" id="boton2" />
+    <br />
+    <input
+      type="button"
+      value="Modificar el texto de elementos de una tabla"
+      id="boton3"
+    />
+    <br />
+
+    <p id="parrafo1">Soy un párrafo</p>
+    <table border="1" id="tabla1">
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+      <tr>
+        <td>111111</td>
+        <td>111111</td>
+        <td>111111</td>
+      </tr>
+    </table>
+
+    <hr />
+  </body>
+</html>

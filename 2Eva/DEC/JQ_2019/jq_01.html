@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_01</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      //$(document).ready(function() {
+      $(function() {
+        $("p").click(function() {
+          alert("Parrafo");
+        });
+
+        $("#patata").click(function() {
+          alert("P A T A T A");
+        });
+
+        $("h1").click(function() {
+          alert("H1");
+        });
+
+        $("#titulo1").fadeOut(3000, function() {
+          $(this).remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="titulo1">Primer título</h1>
+    <h1 id="titulo2">Segundo título</h1>
+    <p id="p1">Terver título</p>
+    <p id="patata">PATATA</p>
+  </body>
+</html>

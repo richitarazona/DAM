@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function() {
+        $("#btToggle").click(ocultar);
+      });
+
+      function ocultar() {
+        //$("#container").toggle("slow", function() {
+        $("#btToggle").val("Mostar");
+      }
+
+      function fade() {
+        $("#container").fadeIn("slow");
+      }
+      function slide() {
+        $("#container").slideDown("slow");
+      }
+      function ocultar() {
+        $("#container").toggle("slow");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>POKEMOM</h1>
+      <h3>++++++++++++++++++++++++</h3>
+      <p>Nombre1</p>
+      <p>Nombre2</p>
+      <p>Nombre3</p>
+      <p>Nombre4</p>
+      <p>Nombre5</p>
+      <p>Nombre6</p>
+      <p>Nombre7</p>
+      <br />
+    </div>
+    <button id="btToggle">Toggle</button> <button id="btHide">Hide</button>
+    <button id="btFadeOut">FadeOut</button>
+    <button id="btSlideUp">SlideUp</button>
+  </body>
+</html>

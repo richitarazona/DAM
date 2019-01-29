@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_09</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("#titulo1").click(function() {
+          var x;
+          x = $("#titulo1");
+          x.css("color", "#ff0000");
+          x.css("background-color", "#ff00ff");
+          x.css("font-family", "Courier");
+        });
+
+        $("#titulo2").click(function() {
+          $("#titulo2").css({
+            color: "green",
+            background: "red",
+            "font-size": "2.3em"
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="titulo1">Título 11111</h1>
+    <h1 id="titulo2">Título 22222</h1>
+    <h1 id="titulo3">Título 333333</h1>
+  </body>
+</html>

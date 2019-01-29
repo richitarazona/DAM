@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <title>JQ_01</title>
+
+    <script>
+      //$(Document).ready(function() {
+
+      //lo mismo que la linea anterior pero reducida
+      $(function() {
+        //HACER CLICK EN <p>
+        $("P").click(function() {
+          alert("parrafo");
+        });
+
+        $("P#p2").click(function() {
+          alert("PatataFrita");
+        });
+        $("#titulo1").fadeOut(3000, function() {
+          $(this).remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="titulo1">PRIMER TITULO</h1>
+    <h1 id="titulo2">SEGUNDO TITULO</h1>
+    <P id="p1">TERCER TITULO</P>
+    <P id="p2">CUARTO TITULO</P>
+  </body>
+</html>

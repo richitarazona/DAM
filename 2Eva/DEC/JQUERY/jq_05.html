@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+      //esconde la tabla 1
+      $(function() {
+        $("#tabla1 tr").click(function() {
+          $(this).hide(2000);
+        });
+      });
+    </script>
+    <script>
+      //esconde la asilla que pulsemos
+      $(function() {
+        $("td").click(function() {
+          $(this).hide(2000);
+        });
+        $("#bt").click(function() {
+          $("#tabla1 tr").show(2000);
+        });
+      });
+    </script>
+    <script>
+      //esconde la asilla que pulsemos
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="tabla1" border="1">
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+    </table>
+
+    <button id="bt">Aparace</button>
+
+    <table id="tabla2" border="1">
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+    </table>
+  </body>
+</html>

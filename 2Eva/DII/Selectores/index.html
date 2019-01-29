@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Selectores y Pseudoclases</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#css3">CSS3</a></li>
+        <li><a href="#selectores">Selectores y Pseudoclases</a></li>
+        <li><a href="http://lesscss.org/">Less</a></li>
+        <li><a href="http://getbem.com/">Código limpio</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article id="css3">
+        <h2>CSS3</h2>
+        <p>
+          CSS3 es una versión posterior a CSS2 que trae más propiedades, que
+          ayudan a mejorar el diseño Web, ya que se pueden hacer más cosas con
+          menos esfuerzo; ahora bien, no todos los navegadores lo soportan,
+          especialmente los antiguos.
+        </p>
+
+        <section>
+          <h3>Can I Use</h3>
+          <p>
+            Mientras CSS3 se convierte en un estándar, los distintos navegadores
+            pueden incluir o no las mejoras propuestas, o incluso añadir las
+            suyas propias. La web
+            <a href="https://caniuse.com/" title="Ventana nueva">
+              Can I use...</a
+            >incluye un listado completo de funcionalidades soportadas por los
+            distintos navegadores.
+          </p>
+        </section>
+        <section>
+          <h3>Prefijos de navegadores</h3>
+          <p>
+            Los prefijos de navegadores nos proporcionan una rápida y fácil
+            implementación de propiedades estándar y sintaxis alternativas.
+            Estos prefijos permiten a los navegadores implementar propiedades
+            CSS3 que de otra forma no funcionan de forma estándar, por el
+            momento. Por este motivo, los prefijos cobran un papel importante en
+            numerosas características de CSS3. Por ejemplo: propiedades de
+            animación, bordes con esquinas redondeadas, sombras en cajas, etc.
+          </p>
+          <p>Prefijos de cada navegador:</p>
+          <ul>
+            <li>WebKit: -webkit /* Google chrome*/</li>
+            <li>Firefox: -moz /*Mozilla*/</li>
+            <li>Opera: -o /*Opera*/</li>
+            <li>Internet Explorer: -ms */Internet explorer*/</li>
+          </ul>
+          <p>
+            Para añadir los prefijos con <strong>Sublime Text</strong>, preceder
+            con un guión(-) a la propiedad y pulsar Tabulador. Ejemplo:
+            <code>-border-radius(tab)</code>, aparecerán todos los prefijos. Si
+            únicamente quiero limitar a unos pocos:
+            <code>guión+inicialesnavegador+propiedad+tab</code>. Ejemplo:
+          </p>
+          <pre>
+     <code>
+        -border-radius+tabulador, el resultado es:
+        -webkit-border-radius: ;
+        -moz-border-radius: ;
+        -ms-border-radius: ;
+        -o-border-radius: ;
+        border-radius: ;
+        -wm-border-radius+tabulador, el resultado es:
+        -webkit-border-radius: ;
+        -moz-border-radius: ;
+        border-radius: ;
+     </code>
+     </pre>
+        </section>
+      </article>
+      <article id="selectores">
+        <h2>Selectores</h2>
+        <p>
+          La versión actual de CSS 3 incluye todos los selectores de CSS 2.1 y
+          añade otras decenas de selectores, pseudo-clases y pseudo-elementos.
+          La lista provisional de novedades y su explicación detallada se puede
+          encontrar en el
+          <a href="http://www.w3.org/TR/css3-selectors/" title="Ventana nueva"
+            >módulo de selectores de CSS 3.</a
+          >
+        </p>
+        <p>
+          Aquí puedes consultar la
+          <a
+            href="https://www.arkaitzgarro.com/css3/capitulo-2.html "
+            target="_blank"
+            title="Ventana nueva"
+            >una breve explicación de Selectores</a
+          >
+        </p>
+        <section>
+          <h3>Sectores de atributo</h3>
+          <p>
+            Mediante los selectores de atributos podemos seleccionar elementos
+            que disponen de ese atributo y cuyo valor comienza ^, contiene *, o
+            termina $, por la cadena de texto indicada
+          </p>
+          <p>Estos son algunos ejemplos</p>
+          <pre>              
+     <code>
+        /* Selecciona todos los enlaces que apuntan a una dirección de correo
+        electrónico */
+        a[href^="mailto:"] { ... }
+     
+        /* Selecciona todos los enlaces que apuntan a una página HTML */
+        a[href$=".html"] { ... }
+     
+        /* Selecciona todos los títulos h1 cuyo atributo title contenga la palabra
+        "capítulo" */
+        h1[title*="capítulo"] { ... }
+     </code>
+     </pre>
+        </section>
+        <section>
+          <h3>Selector general de hermanos</h3>
+          <p>
+            Otro de los nuevos selectores de CSS 3 es el "selector general de
+            elementos hermanos", que generaliza el selector adyacente de CSS
+            2.1. Su sintaxis es <code>elemento1 ~ elemento2</code> y selecciona
+            el elemento2 que es hermano de elemento1 y se encuentra detrás en el
+            código HTML. En el selector adyacente la condición adicional era que
+            los dos elementos debían estar uno detrás de otro en el código HTML,
+            mientras que ahora la única condición es que uno esté detrás de otro
+          </p>
+          <pre>
+     <code>
+        h1 + h2 { ... }  /* selector adyacente */
+        h1 ~ h2 { ... }  /* selector general de hermanos */
+     </code>
+     </pre>
+        </section>
+        <section>
+          <h3>Pseudoelementos y Pseudoclases</h3>
+          <p>
+            Los <strong>pseudo-elementos</strong> de CSS 2.1 se mantienen en CSS
+            3, pero cambia su sintaxis y ahora se utilizan :: en vez de :
+            delante del nombre de cada pseudo-elemento.
+          </p>
+          <ul>
+            <li>::first-line</li>
+            <li>::first-letter</li>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::selection</li>
+          </ul>
+          <p>Tiene 12 nuevas <strong>pseudoclases</strong>:</p>
+          <ul>
+            <li>elemento:nth-child(numero)</li>
+            <li>elemento:nth-child(odd)</li>
+            <li>elemento:nth-child(even)</li>
+            <li>elemento:nth-last-child(numero)</li>
+            <li>elemento:empty</li>
+            <li>elemento:first-child</li>
+            <li>elemento:last-child</li>
+            <li>elemento:nth-of-type(numero)</li>
+            <li>elemento:nth-last-of-type(numero)</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

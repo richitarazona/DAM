@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQ_12</title>
+    <link rel="stylesheet" href="10_estilos.css" />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+      /* $(function() {
+         $("a").mouseover(function() {
+           $(this).css("background-color", "#ff0");
+         });
+
+         $("a").mouseout(function() {
+           $(this).css("background-color", "#fff");
+         });
+
+       });*/
+      $(function() {
+        $("a").hover(
+          function() {
+            $(this).css("background-color", "#ff0");
+          },
+          function() {
+            $(this).css("background-color", "#fff");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://www.eldiario.es">EL DIARIO</a> <br />
+    <a href="http://www.marca.com">MARCA</a>
+  </body>
+</html>

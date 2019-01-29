@@ -1,0 +1,40 @@
+@lado:5rem;
+@rh:3rem;
+@rv:1rem;
+@radio:2rem;
+@radio-mitad: @radio / 2;
+div{
+		background-color:green;
+		width:@lado;
+		height: @lado;
+		margin:0.5rem;
+		color:white;
+		padding: 2rem 0 2rem .1rem;
+		font-size:.5rem;
+		float: left;
+		box-sizing: border-box;
+
+	}
+div:nth-of-type(1){
+	/*el mismo radio para los cuatro puntos*/
+	border-radius:@radio;
+}
+div:nth-of-type(2){
+	/*Esquinas1y3 Esquinas2y4*/
+	border-radius:@radio @radio-mitad;
+}
+div:nth-of-type(3){
+	//Rhorizontal para las 4 esquinas / Rvertical para las 4esquinas.
+	border-radius: @rh ~"/" @rv;
+}
+div:nth-of-type(4){
+	
+	border-radius: @rh @rv ~"/" @rv;
+}
+div:nth-of-type(5){
+	border-radius: @rh @rh @rh+1 @rh ~"/" @rv @rv @rv+1 @rv;
+}
+div:nth-of-type(6){
+	border-radius:100% 0;
+	border-left:3rem dotted pink;
+}

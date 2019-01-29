@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    link
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="h1">
+      Reglas anidadas -
+      <span class="highlight small">Escribe aquí tu apellido y nombre</span>
+    </h1>
+    <p class="lead">
+      <span class="highlight">Sin &: </span>Este párrafo tiene la clase .lead y
+      dentro una etiqueta span con clase highlight.
+    </p>
+    <p class=" lead small">
+      <span class="highlight">Con &: </span>Este párrafo además de tener la
+      clase lead, propia de un párrafo tiene la clase .small la cual pone la
+      fuente más pequeña. Como en el párrafo anterior también tiene una etiqueta
+      span con la clase .highlight. Al final del este párrafo está añadida la
+      pseudoclase ::after, la cual añade el texto "leer más" de color naranja
+    </p>
+    <p class="lead">
+      <span class="highlight">Ejercicio: </span>Crea el archivo less con reglas
+      anidadas para crear el estilo adecuado. El siguiente código serían las
+      clases básicas para este css. Reescribe dicho código en less , mediante
+      reglas anidadas para el parrafo o la clase .lead. y que como resultado de
+      compilarlos se generen estos estilos. Observa que también hay estilos para
+      .h1, crea sus reglas anidadas.
+    </p>
+    <pre><code>
+.lead {
+ margin-bottom: 1.25em;
+ font-size: 1em;
+ font-weight: 300;
+ line-height: 1.4;
+}
+.lead .highlight {
+ color: orange;
+}
+.lead.small {
+ font-size: .8em;
+}
+.lead.small::after {
+ content: " Leer más.";
+ color: orange;
+}
+.h1 {
+ font-size: 2em;
+}
+.h1 span.highlight {
+ color: blue;
+}
+.h1 .small {
+ font-size: 1.6em;//soluciona este error, ya que queremos mostrar más pequeña la fuente
+
+}
+</code></pre>
+    <p class="lead">
+      <span class="highlight">Continuación ejercicio: </span>Realiza otro
+      ejemplo que tú quieras con regla anidada, utilizando el operador & ó
+      :extend()
+    </p>
+  </body>
+</html>

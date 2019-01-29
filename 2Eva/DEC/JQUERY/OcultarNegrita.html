@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $("strong").click(function() {
+          $(this).hide();
+        });
+        $("#btAparecer").click(function() {
+          $("strong").show();
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem <strong>ipsum</strong> dolor sit amet consectetur adipisicing elit.
+      Minima temporibus vitae qui, reiciendis ab ipsum
+      <strong> sint non officia</strong> sunt molestiae harum. Commodi numquam
+      nihil quis, atque ipsam fugit perspiciatis?
+    </p>
+    <button id="btAparecer">Aparece Negrita</button>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="27_estilos.css" />
+    <script>
+      $(function() {
+        $("#btmostrar").click(ocultar);
+        $("#btOcultar").click(mostrar);
+        $("#btMasOpacity").click(ocultarFade);
+        $("#btMenosOpacity").click(MostrarFade);
+        $("#btMix").click(mix);
+      });
+      function ocultar() {
+        $(".recuadro").fadeIn("slow");
+      }
+      function mostrar() {
+        $(".recuadro").fadeOut("fast");
+      }
+      function ocultarFade() {
+        $(".recuadro").fadeTo("slow", 0.2);
+      }
+      function MostrarFade() {
+        $(".recuadro").fadeTo("fast", 1);
+      }
+      function mix() {
+        $(".recuadro").fadeToggle(2000);
+      }
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btmostrar">Mostrar</button>
+    <button id="btOcultar">Ocultar</button>
+    <button id="btMasOpacity">Opacity -</button>
+    <button id="btMenosOpacity">Opacity +</button>
+    <button id="btMix">Ocultar/Mostrar</button>
+    <div class="recuadro">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, debitis
+      quas quae et consequatur tempora, nesciunt laudantium eum voluptatem
+      doloremque, ex eveniet. Dolor tempore ea vel blanditiis aut quas minus?
+    </div>
+  </body>
+</html>

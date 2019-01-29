@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      $(function() {
+        $("#tabla1").mouseover(function() {
+          $("#tabla1").attr("border", "5");
+        });
+        $("#tabla1").mouseout(function() {
+          $("#tabla1").attr("border", "2");
+        });
+        $("#tabla1").mousedown(function() {
+          $("#tabla1").attr("background-color", "green");
+        });
+        $("#tabla1").mousedown(function() {
+          $("#tabla1").attr("color", "red");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tabla</h1>
+    <table id="tabla1" border="1">
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+      </tr>
+    </table>
+  </body>
+</html>

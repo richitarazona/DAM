@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+footer,
+header {
+  text-align: center;
+  width: 100%;
+  background-color: #444;
+  color: whitesmoke;
+  padding: 2em;
+}
+body {
+  background: gainsboro;
+}
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: brown;
+  border-style: solid;
+}
+fieldset {
+  border-color: brown;
+  border-style: solid;
+  background-color: #ffa963;
+  box-shadow: 0 0 10px #999;
+  border-radius: 9px;
+  padding: 0 20px 20px;
+}
+fieldset legend {
+  font-size: 1.4em;
+  margin: 20px;
+}
+fieldset input {
+  background-color: #ffe5d1;
+  border-style: none;
+  box-shadow: 0 0 10px #999;
+}
+form {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 2.3em;
+  padding: 1em;
+}
+.resultado {
+  padding: 10px;
+  text-align: left;
+  border-color: #ffa963;
+  border-style: solid;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.clase {
+  margin-left: 10px;
+}
+.boton {
+  background-color: brown;
+  color: white;
+  border: #444;
+  border-radius: 2px;
+  padding: 0.4em;
+  box-shadow: none;
+  display: block;
+  margin-right: auto;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-bottom: 3px;
+}
+h2 {
+  text-align: center;
+  color: brown;
+}
+.errores {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border-color: hotpink;
+  border-style: dotted;
+  width: 300px;
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h3{
+    color:hotpink;
+}

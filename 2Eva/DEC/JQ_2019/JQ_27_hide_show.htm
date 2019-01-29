@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+<title>JQ_27_2019</title>
+<link rel="StyleSheet" href="27_estilos.css" type="text/css">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script>
+$(function()
+{
+	$("#boton1").click(ocultarRecuadro);
+	$("#boton2").click(mostrarRecuadro);
+	$("#boton3").click(function(){
+		$("#descripcion").toggle();
+	});
+}
+)
+	function ocultarRecuadro()
+	{
+		$("#descripcion").hide("slow");
+	}
+
+	function mostrarRecuadro()
+	{
+		$("#descripcion").show("fast");
+	}
+	
+	
+</script>
+</head>
+<body>
+<input type="button" id="boton1" value="Ocultar recuadro">
+<input type="button" id="boton2" value="Mostrar recuadro">
+<input type="button" id="boton3" value="Mostrar///Ocultar recuadro">
+<div id="descripcion" class="recuadro">
+<p>HTML es el lenguaje que se emplea para el desarrollo de páginas 
+de internet.</p> 
+<p>En la provincia de Huelva</p>
+<p>había un molinero horrado</p>
+<p>que ganaba su sustento</p>
+<p>y era casado con un moza</p>
+<p>que era una rosa y era tan bella que el corrigidor madre se prendo de ella</p>
+</div>
+</body>
+</html> 

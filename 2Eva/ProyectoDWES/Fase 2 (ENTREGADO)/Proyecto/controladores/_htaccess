@@ -1,0 +1,2 @@
+deny from all
+ErrorDocument 403 "<body bgcolor=#ff6633><h1>Acceso prohibido a esta carpeta</h1>"
