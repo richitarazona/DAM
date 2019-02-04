@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <!--     <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <link href="query_UI/jquery-ui.css" rel="stylesheet" />
+    <script src="query_UI/external/jquery/jquery.js"></script>
+    <script src="query_UI/jquery-ui.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#acordeon").accordion({
+          animate: 5000,
+          collapsible: true
+        });
+
+        // Getter
+        // var animate = $(".acordeon").accordion("option", "animate");
+
+        // Setter
+        //$(".acordeon").accordion("option", "animate", 200);
+      });
+    </script>
+    <title>Acordeon</title>
+  </head>
+  <body>
+    <center>
+      <h1>Test Bomberos</h1>
+      <div id="acordeon">
+        <h3>Las bocas de salida de una columna seca en los pisos se sitúan:</h3>
+        <div>
+          En la fachada.<br />
+          En la plantas pares hasta la octava.<br />
+          En todas las plantas.<br />
+          Cada cuatro plantas.<br />
+        </div>
+
+        <h3>La transmisión de calor por contacto se denomina:</h3>
+        <div>
+          Oxidación.<br />
+          Convección.<br />
+          Radiación.<br />
+          Conducción.
+        </div>
+        <h3>
+          A la proporción de aire y combustible adecuada para llevar a cabo una
+          combustión completa la llamamos:
+        </h3>
+        <div>
+          Presión de vapor.<br />
+          Peso específico.<br />
+          Mezcla estequiométrica.<br />
+          Densidad relativa vapor/aire.
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
